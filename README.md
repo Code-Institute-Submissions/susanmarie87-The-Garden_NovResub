@@ -248,3 +248,65 @@ The site has social media links displayed at the footer of the page, as well as 
 
 * **Verdict**
 
+<a></a>
+
+## **Deployment**
+
+### Local Deployment
+
+I have created the Dog Health Tracker project using Github, from there I used [Gitpod](https://gitpod.io/) to write my code. 
+Then I used commits to git followed by "git push" to my GitHub repository. 
+I've deployed this project to Heroku and used "git push heroku master" to make sure my pushes to GitHub were also made to Heroku. 
+
+This project can be ran locally by following the following steps: (
+I used Gitpod for development, so the following steps will be specific to Gitpod. 
+You will need to adjust them depending on your IDE. You can find more information about installing packages using pip and virtual environments [here](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
+
+
+To clone the project: 
+
+1. From the application's repository, click the "code" button and download the zip of the repository.
+    Alternatively, you can clone the repository using the following line in your terminal:
+  
+    ```
+    git clone https://github.com/susanmarie87/The-Garden.git
+    ```
+1. Access the folder in your terminal window and install the application's [required modules](https://github.com/Susanmarie87/The-Garden/blob/master/requirements.txt) using the following command:
+
+    ```
+    pip3 install -r requirements.txt
+    ```
+
+    1. Sign-in or sign-up to [MongoDB](https://www.mongodb.com/) and create a new cluster
+    * Within the Sandbox, click the collections button and after click Create Database (Add My Own Data) gs-Garden
+    * Set up the following collections: [Click here to see the exact Database Structure](#database-structure)
+      
+
+          *** Add in Mongo data structures here ***
+
+1. In your IDE, create a file containing your environmental variables called env.py at the root level of the application. 
+    It will need to contain the following lines and variables:
+    ```
+    import os
+
+    os.environ["IP"] = "0.0.0.0"
+    os.environ["PORT"] = "5000"
+    os.environ["SECRET_KEY"] = "YOUR_SECRET_KEY"
+    os.environ["DEBUG"] = "True"
+    os.environ["MONGO_URI"] = "YOUR_MONGODB_URI"
+    os.environ["MONGO_DBNAME"]= "DATABASE_NAME" 
+    ```
+
+    Please note that you will need to update the **SECRET_KEY** with your own secret key, as well as the **MONGO_URI** and **MONGO_DBNAME** variables with those provided by MongoDB.
+    Tip for your SECRET_KEY, you can use a [Password Generator](https://passwordsgenerator.net/) in order to have a secure secret key. 
+    I personlly recommend a length of 24 characters and exclude Symbols.
+    To find your MONGO_URI, go to your clusters and click on connect. Choose connect your application and copy the link provided. 
+    Don't forget to update the necessary fields like password and database name. 
+
+    If you plan on pushing this application to a public repository, ensure that env.py is added to your .gitignore file.
+
+1. The application can now be run locally. In your terminal, type the following command 
+    ```
+    python3 app.py. 
+    ```
+    
