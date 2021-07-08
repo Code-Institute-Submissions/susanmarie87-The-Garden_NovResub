@@ -375,6 +375,10 @@ I would like to recognize the people who have helped me through this project:
 
 - My mentor [Simen Daehlin](https://github.com/Eventyret) 
 
+- Code Institute
+
+- The Tutors. John, Michale, Sheryl, Scott, and Alan, have all spent countless hours helping me solve the most trivial of issues. Without their support I could have never made it this far so a major shoutout to them. 
+
 
 [Back to content](#contents)
 
