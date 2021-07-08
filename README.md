@@ -347,3 +347,35 @@ To clone the project:
 [Back to Top](#table-of-contents)
 
 <a></a>
+## Credits ##
+
+### Audio ###
+
+
+### Images ###
+
+### Colour ###
+
+
+
+### Image editing ###
+
+
+### Code ideas ###
+
+- 
+
+[Back to content](#contents)
+
+---
+
+## Acknowledgements ##
+
+I would like to recognize the people who have helped me through this project:
+
+- My mentor [Simen Daehlin](https://github.com/Eventyret) 
+
+
+[Back to content](#contents)
+
+---
