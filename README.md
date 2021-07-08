@@ -81,3 +81,21 @@ The **goal**
 * When a vegetable is clicked, it should take you to the kid-friendly recipe in the recipes section.
 * The recipes section should provide 
 * The event calendar should work with signup events. 
+
+### Design Choices ###
+
+
+#### Fonts ####
+Big Shoulder Stencil display is the font chosen for the Title and headings. This font was chosen because it is bold, stands out, and the title looks amazing. I feel the characteristics of this font will really help bring the website to life. 
+
+Monda was chosen the paragraphs and information throughout the site. This style was chosen as it seems that the two fonts will compliment each other nicely. They wont be too different yet both are bold and stand out. i want the font to grasp the user's attention from the moment they hit the landing page and Monda paired with Big Shoulder Stencil Family is the perfect match.
+
+#### Colours ####
+
+#A1DD70 This bright lime greencolor will be used for the bottom container of the website to make it stand out.
+ 
+#E8ECD6 This will be the filler color throughout the site.  
+
+#FDFFF0 This color will be used as the break point between the red nav and footer and the green containers. 
+
+#A23131 This color will be used for the nav and footer.
