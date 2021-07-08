@@ -179,3 +179,34 @@ Gabe's Garden will look to host events that will inspire guests of all ages. Eve
 ## SignUp
 - Similar to the login page, the user will be met with a form. This will ask for basic information an email and password. 
 
+## Features Implemented ###
+
+- **Responsive design**
+
+(/wireframes/)
+
+- **User-friendly display**
+
+
+
+(/wireframes/.jpg)
+
+- **Dashboard for easy navigation**
+
+
+
+
+
+- **Social media links**
+
+The site has social media links displayed at the footer of the page, as well as a button to take them to the contact/feedback form.
+
+
+- **Functional contact form**
+
+### Future Features ###
+
+
+### Considered Features ###
+
+- **Users do not have an option to choose levels or tasks of the game**
