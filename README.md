@@ -36,3 +36,30 @@ Welcome to Gabe's garden. Fed up with America's food choices in the cafeteria's 
 - [Acknowledgements](#acknowledgements)
 
 ---
+
+## UX (User Experience) ##
+
+
+### Project Goals ###
+
+The **goal** 
+
+### User Goals ###
+
+- **Learn about the mission of Gabe's Garden** 
+- **Find out what's growin in the garden** 
+- **See what recipes are our favorite for each vegetable and fruit**
+- **Learn how to become a member** 
+- **Sign up to volunteer their time at the garden** 
+- **Contact** 
+
+### User Stories ###
+* As a user, I want to easily understand what the website is about.
+* As a user, I want to see what is growing in the garden.
+* As a user, I want to see how the fruits and vegetables are being used in recipes.
+* As a user, I want to be able to register as a member.
+* As a user, I want to be able to subscribe to a newsletter.
+* As a user, I want to be able to signup to volunteer.
+* As a user, I want to be able to easily access the links to social media.
+* As a user, I want to be able to contact the organization with questions or concerns.
+* As a user, I want to be able to delete an event that I signed up for if something changes.
