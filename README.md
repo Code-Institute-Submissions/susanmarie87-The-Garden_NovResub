@@ -212,3 +212,39 @@ The site has social media links displayed at the footer of the page, as well as 
 [Back to content](#contents)
 
 ---
+
+<a></a>
+
+## **TESTING**
+
+### NAVIGATION BAR
+
+* **PLAN**
+
+* **IMPLEMENTATION**
+
+* **TEST**
+
+* **RESULT**
+
+### CONTACT FORMS
+
+* **PLAN**
+
+* **IMPLEMENTATION**
+
+* **TEST**
+
+* **RESULT**
+
+
+[Back to Top](#table-of-contents)
+
+### BUGS
+
+* **Bug**
+
+* **Fix**
+
+* **Verdict**
+
