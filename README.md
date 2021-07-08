@@ -104,33 +104,6 @@ Monda was chosen the paragraphs and information throughout the site. This style 
 #### Wireframes ####
 
 
-## Technologies ##
-
-### Languages ###
-
-- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-
-### Libraries ###
-
-- [jQuery](https://jquery.com/)
-- [Popper](https://popper.js.org/)
-- [Popper JS](https://popper.js.org/)
-- [Bootstrap](https://getbootstrap.com/)
-- [Font-Awesome](https://fontawesome.com/icons?d=gallery)
-- [Google fonts](https://fonts.google.com/)
-  
-### Tools ###
-
-- [Git](https://git-scm.com/)
-- [GitHub](https://github.com/)
-- [Visual Studio Code](https://code.visualstudio.com/)
-
-[Back to content](#contents)
-
----
-
 ## Features ##
 
 ## Existing Features
@@ -210,3 +183,32 @@ The site has social media links displayed at the footer of the page, as well as 
 ### Considered Features ###
 
 - **Users do not have an option to choose levels or tasks of the game**
+
+
+
+## Technologies ##
+
+### Languages ###
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+### Libraries ###
+
+- [jQuery](https://jquery.com/)
+- [Popper](https://popper.js.org/)
+- [Popper JS](https://popper.js.org/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Font-Awesome](https://fontawesome.com/icons?d=gallery)
+- [Google fonts](https://fonts.google.com/)
+  
+### Tools ###
+
+- [Git](https://git-scm.com/)
+- [GitHub](https://github.com/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+
+[Back to content](#contents)
+
+---
