@@ -70,3 +70,14 @@ The **goal**
 * As a site owner, I want people to be able to learn easy tips and tricks.
 * As a site owner, I would like for the site visitor;s to be able to connect with social media links.
 * As a site owner, I would like to inspire more schools to take action and join in on the farm to table lifestyle.
+
+### User Requirements and Expectations ###
+* The site must stand out. 
+* The mission of the Garden must be easily received.
+* The content needs to be relevant to all audiences.
+* The visual elements should be visually appealing.
+* The signup sheet must work properly
+* The contact form should work properly.
+* When a vegetable is clicked, it should take you to the kid-friendly recipe in the recipes section.
+* The recipes section should provide 
+* The event calendar should work with signup events. 
