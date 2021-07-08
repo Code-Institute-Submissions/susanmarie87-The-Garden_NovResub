@@ -99,3 +99,30 @@ Monda was chosen the paragraphs and information throughout the site. This style 
 #FDFFF0 This color will be used as the break point between the red nav and footer and the green containers. 
 
 #A23131 This color will be used for the nav and footer.
+
+![Color Scheme](assets/images/color-scheme.png)
+#### Wireframes ####
+
+
+## Technologies ##
+
+### Languages ###
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+### Libraries ###
+
+- [jQuery](https://jquery.com/)
+- [Popper](https://popper.js.org/)
+- [Popper JS](https://popper.js.org/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Font-Awesome](https://fontawesome.com/icons?d=gallery)
+- [Google fonts](https://fonts.google.com/)
+  
+### Tools ###
+
+- [Git](https://git-scm.com/)
+- [GitHub](https://github.com/)
+- [Visual Studio Code](https://code.visualstudio.com/)
