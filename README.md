@@ -126,3 +126,32 @@ Monda was chosen the paragraphs and information throughout the site. This style 
 - [Git](https://git-scm.com/)
 - [GitHub](https://github.com/)
 - [Visual Studio Code](https://code.visualstudio.com/)
+
+[Back to content](#contents)
+
+---
+
+## Features ##
+
+## Existing Features
+- Navbar
+    - The navigation bar will display Gabe's Garden logo on the top right corner.
+    - The navbar will look different depending on whether or not the user is logged in.
+    * If the user is logged in, the site will display their name.
+    * If the user is not logged in, the site will display "My account"
+
+    - The navbar will display the links to the pages which are:
+        1. Home
+        2. What's Growing?
+        3. Recipes
+        4. Events
+        5. LogIn
+        6. SignUp
+        
+- Footer
+    - The footer features:
+          - Quick links to each page.
+          - A display of upcoming events.
+          - Social media links
+          - Copyright information
+
