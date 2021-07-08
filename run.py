@@ -15,17 +15,17 @@ def about():
     return render_template("about.html")
 
 
-    @app.route("/events")
+@app.route("/events")
 def events():
     return render_template("events.html")
 
 
-    @app.route("/signup")
-def signup():
-    return render_template("signup.html")
+@app.route("/login")
+def login():
+    return render_template("login.html")
 
 
-    @app.route("/register")
+@app.route("/register")
 def register():
     return render_template("register.html")
 
