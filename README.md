@@ -63,3 +63,10 @@ The **goal**
 * As a user, I want to be able to easily access the links to social media.
 * As a user, I want to be able to contact the organization with questions or concerns.
 * As a user, I want to be able to delete an event that I signed up for if something changes.
+
+### Site Owner Goals ###
+* As a site owner, I want to create an interactive environment for all demographics.
+* As a site owner, i want to make sure people are inspired to start their own garden.
+* As a site owner, I want people to be able to learn easy tips and tricks.
+* As a site owner, I would like for the site visitor;s to be able to connect with social media links.
+* As a site owner, I would like to inspire more schools to take action and join in on the farm to table lifestyle.
