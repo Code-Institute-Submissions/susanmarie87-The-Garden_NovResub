@@ -383,3 +383,4 @@ I would like to recognize the people who have helped me through this project:
 [Back to content](#contents)
 
 ---
+Photo by Artem Beliaikin from Pexels (apple trees)
