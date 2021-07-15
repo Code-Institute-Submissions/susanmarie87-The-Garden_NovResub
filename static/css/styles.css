@@ -61,7 +61,7 @@ header ul li a {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background-image: url('../images/garden-kids.jpg');
+    background: url('../img/garden-kids.jpg');
     background-size: cover;
     display: flex;
     justify-content: center;
