@@ -29,7 +29,7 @@ header {
 header.sticky {
     padding: 5px 100px;
     background: #fff;
-    border-bottom: 1px solid (0, 0, 0, .1)
+    border-bottom: 1px solid rgba(0, 0, 0, .1)
 }
 
 header .logo {
@@ -124,4 +124,100 @@ p {
     font-weight: 300;
     margin-bottom: 20px;
     letter-spacing: 1px;
+}
+
+.btn {
+    postion: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    background: #000;
+    text-decoration: none;
+    color: #fff;
+}
+
+.services {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+.services .box {
+    width: 300px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+
+    box-shadow: 0 15 px 30px rgba(0, 0, 0, .05);
+}
+
+.services .box .iconBx {
+    margin-top: 25px;
+}
+
+.services .box .iconBx img {
+    max-width: 70px;
+    margin-bottom: 15px;
+}
+
+.services .box h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.stats {
+    background: #000;
+    padding-top: 250px;
+    margin-top: -250px;
+}
+
+.stats h3 .stats p {
+    color: #fff;
+
+}
+
+.statsBox {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250, ) 1fr));
+    grid-gap: 20px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+.statsBox h2 {
+    color: #fff;
+    font-size: 36px;
+}
+
+.statsBox h4 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.workBx {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+.workBx .brand {
+    position: relative;
+    background: #4978ff;
+    min-height: 300px;
+    width: 250px;
+    margin: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
