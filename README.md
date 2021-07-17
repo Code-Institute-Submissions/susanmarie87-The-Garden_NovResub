@@ -384,3 +384,7 @@ I would like to recognize the people who have helped me through this project:
 
 ---
 Photo by Artem Beliaikin from Pexels (apple trees)
+
+Photo by Kiana Bosman on Unsplash(future leader)
+
+Photo by Karl Fredrickson on Unsplash(cherry trees)
