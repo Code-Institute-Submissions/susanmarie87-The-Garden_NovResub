@@ -24,6 +24,7 @@
             <li><a href="{{ url_for('login') }}">Login</a></li>
             <li><a href="{{ url_for('register') }}">Contact</a></li>
         </ul>
+
     </header>
 
     <section class="banner" id="home">
@@ -228,38 +229,34 @@
                         <div class="inputBx50">
                             <input type="text" name="" placeholder="Name">
                         </div>
-                        <div class="inputBx50">
-                            <input type="text" name="" placeholder="Email">
-                        </div>
                     </div>
-                    <div class="row100">
-                        <div class="inputBx100">
-                            <textarea placeholder="Message"></textarea>
-                        </div>
-                        <div class="row100">
-                            <div class="inputBx100">
-                                <input type="submit" name="" value="Send">
-                            </div>
-                        </div>
-                </form>
+                    <div class="inputBx50">
+                        <input type="text" name="" placeholder="Email Address">
+                    </div>
             </div>
-            <div class="sci">
-                <ul>
-                    <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
-                </ul>
+            <div class="row100">
+                <div class="inputBx100">
+                    <textarea placeholder="message"></textarea>
+                </div>
             </div>
+            <div class="row100">
+                <div class="inputBx100">
+                    <input type="submit" name="" value="Send">
+                </div>
+            </div>
+            </form>
+        </div>
+        <div class="sci">
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+            </ul>
         </div>
         <p class="copyright">Gabe's Garden | Copyright © 2021</p>
+        </div>
     </section>
-    </div>
-    </div>
-    </section>
-
-
     <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
-
 </body>
 
 </html>
