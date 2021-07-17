@@ -10,11 +10,6 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    min-height: 1000px;
-    background-color: #000;
-}
-
 header {
     position: fixed;
     top: 0;
@@ -55,13 +50,8 @@ header ul {
 
 header ul li {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    list-style: none;
 }
-
-header.sticky.logo,
-header .sticky ul li a {}
 
 header ul li a {
     position: relative;
@@ -89,10 +79,16 @@ header ul li a {
     font-size: 90px;
     text-transform: uppercase;
     text-align: center;
+    line-height: 1em;
 }
 
 .banner h2 span {
     color: #9dff00;
+}
+
+header.sticky.logo,
+header .sticky ul li a {
+    color: #000;
 }
 
 .sec {
@@ -111,7 +107,7 @@ header ul li a {
 }
 
 .mxw800p {
-    max-width: 800;
+    max-width: 800px;
     margin: 0 auto;
 }
 
