@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bigelow+Rules&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -34,6 +36,7 @@ header.sticky {
 
 header .logo {
     position: relative;
+    font-family: 'Bigelow Rules', sans-serif, ;
     font-weight: 700;
     color: #fff;
     text-decoration: none;
@@ -254,6 +257,14 @@ p {
     align-items: center;
 }
 
+.teamBx .member .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .teamBx .member .imgBx img {
     position: absolute;
     top: 0;
@@ -292,4 +303,56 @@ p {
     display: block;
     font-size: 12px;
     font-weight: 300;
+}
+
+.contact {
+    background: #000;
+}
+
+.contact h3,
+.contact p {
+    color: #fff;
+}
+
+.contactForm {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.contactForm form {
+    width: 100%;
+}
+
+.contactForm .row100 {
+    display: flex;
+    width: 100%;
+}
+
+.contactForm .row100 .inputBx50 {
+    width: 50%;
+    margin: 0 20px;
+}
+
+.contactForm .row100 .inputBx100 {
+    width: 100%;
+    margin: 0 20px;
+
+}
+
+.contactForm .row100 input,
+.contactForm .row100 text-area {
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    background: transparent;
+    width: 100%;
+    padding-top: 10px 0;
+    outline: none;
+    font-size: 18px;
+    font-wight: 300;
+    margin: 20 px;
+    resize:
 }
