@@ -58,6 +58,7 @@ The **goal**
 * As a user, I want to see what is growing in the garden.
 * As a user, I want to see how the fruits and vegetables are being used in recipes.
 * As a user, I want to be able to register as a member.
+* As a user, I want a "Forgot Password" option in case I forget my password.
 * As a user, I want to be able to subscribe to a newsletter.
 * As a user, I want to be able to signup to volunteer.
 * As a user, I want to be able to easily access the links to social media.
@@ -219,24 +220,67 @@ The site has social media links displayed at the footer of the page, as well as 
 
 ### NAVIGATION BAR
 
+User story: As a user i want to be able to register as a member.
+
 * **PLAN**
 
+In order for users to be able to interact with the garden, there should be a feature on the website that allows them to be able to register their account.
+This way, they wil be able to add or delete events at the garden. 
+
 * **IMPLEMENTATION**
+
+There has been a registration page created with a form where the user must enter the basic information. Their username and password will be set up with minimum pattern requirements. Error messages will appear when the user has incorrectly entered information that does not match the correct patterns. after a successful login. The user will be greeted with a hello,(username) atop the page. The user will be able to RSVP for garden events
 
 * **TEST**
 
 * **RESULT**
 
-### CONTACT FORMS
+### Sign In
 
 * **PLAN**
 
+The user should be able to fill out a form with their username and password. After signing in, their username will be displayed on the top and they shoud be directed to a page where they can see if they have any upcoming events. 
+
 * **IMPLEMENTATION**
+
+A sign in form has been created where the user fills out their username and password. This information will be verified by the database. If the wrong information is entered, there will be an error flash message sent to the user. 
 
 * **TEST**
 
 * **RESULT**
 
+### Forgot Password 
+
+* **PLAN**
+
+I plan on adding in a "Forgot password" option in the event that a user has forgotten their password
+
+* **IMPLEMENTATION**
+
+* **TEST**
+
+### RSVP for an event
+
+User story: AS a user, I would like the option to RSVP for an event.
+
+* **PLAN**
+My plan is to give users the option to RSVP for events at the garden. 
+
+* **IMPLEMENTATION**
+
+To implement this, I will create
+
+* **TEST**
+
+### Delete event
+
+User story: As a user, I would like the option to delete an event.
+
+* **PLAN**
+The plan is to setup an option where the usere can delete and event they had orginally signed up for in the case that they are unable to make it.
+* **IMPLEMENTATION**
+In order to implement this CRUD function.
+* **TEST**
 
 [Back to Top](#table-of-contents)
 
@@ -388,3 +432,5 @@ Photo by Artem Beliaikin from Pexels (apple trees)
 Photo by Kiana Bosman on Unsplash(future leader)
 
 Photo by Karl Fredrickson on Unsplash(cherry trees)
+
+Photo by Jonathan Borba on Unsplash(ambitious girl)
