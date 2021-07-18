@@ -1,4 +1,66 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Events Page</h1>
+
+<img src="assets/images/plants.jpg" class="background-image" alt="colorful background image">
+
+<header>
+    <h1 class="products-title">Events</h1>
+
+    <!-- Product Cards from bootstrap-->
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2">
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="assets/images/garden.jpg" class="card-img-top" alt="garden" />
+                    <div class="card-body">
+                        <h5 class="card-title">Volunteer</h5>
+                        <p class="card-bathbombs">
+                            We get by with a little help from our friends. Please join us throughout the month to lend a
+                            helping hand to kids
+                        </p>
+                        <button type="button" class="btn btn-info">Register</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="assets/images/water.jpg" class="card-img-top" alt="water" />
+                    <div class="card-body">
+                        <h5 class="card-title">Water Conservation</h5>
+                        <p class="card-bracelet">
+                            Saving water has become of utmost importancce. Learn the best ways to conserve with our
+                            experts at the garden.
+                        </p>
+                        <button type="button" class="btn btn-info">Register</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="assets/images/party.jpg" class="card-img-top" alt="party" />
+                    <div class="card-body">
+                        <h5 class="card-title">Celebrate Good Times</h5>
+                        <p class="card-smudge">
+                            Join us in the garden for our monthly garden parties as well as our holiday parties.
+                        </p>
+                        <button type="button" class="btn btn-info">Register </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="assets/images/ladybug.jpg" class="card-img-top" alt="ladybug" />
+                    <div class="card-body">
+                        <h5 class="card-title">Little Critter Control</h5>
+                        <p class="card-text">
+                            Learn how to deter, not kill, our insect friends with natural little critter control.
+                        </p>
+                        <button type="button" class="btn btn-info">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
 {% endblock %}
