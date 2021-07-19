@@ -1,4 +1,179 @@
 {% extends "base.html" %}
+
 {% block content %}
-<h1>Index Page</h1>
+
+<section class="banner" id="home">
+    <h2>On A Mission To<br> <span>Change Nutrition</span></h2>
+
+
+</section>
+<section class="sec" id="about">
+    <div class="content">
+        <div class="mxw800p">
+            <h3>Who We Are</h3>
+            <p>In America, we have some of the world's worst food. The food supply is mostly processed,
+                full of poison, and if it is not fake, processed, and full of poison, it is saturated
+                in chemicals that cause cancer as a form of pest control. As a result, our nation is seeing
+                some of the worst health outcomes in children. Over 40% of America's children suffer
+                from chronic illness and cancer is a leading cause of death. We are here to change that.</p>
+            <a href="#" class="btn">Read Our Story</a>
+        </div>
+    </div>
+</section>
+
+<section class="sec about" id="services">
+    <div class="content">
+        <div class="mxw800p">
+            <h3>Our Mission</h3>
+            <p>We would like to start the trend of school's growing a large percentage of their own organic food
+                using natural pest control and regenerative farming. Through these simple methods, we can instill
+                the value of knowing where your food comes from and what it means to grow your own food. We hope
+                that these values will help to reduce the rates of chronic illness.
+        </div>
+        <div class="services">
+            <div class="box">
+                <div class="iconBX" alt="1">
+                    <img src="static/img/icon1.png">
+                    <h2>Dreamers</h2>
+                    <p>We are tiny but mighty.
+                        Through hard work and dedication, we will make our
+                        dreams a reality.
+                    </p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="iconBX" alt="2">
+                    <img src="static/img/icon2.png">
+                    <h2>Creators</h2>
+                    <p>What better way to creat is there then by growing your own food?
+                        We will create healthy food, healthy kids, and a healthy planet
+                        from our sustainable farming practices.
+                    </p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="iconBX" alt="3">
+                    <img src="static/img/icon3.png">
+                    <h2>Earth Healers</h2>
+                    <p>Our sustainable farming practices will mend the soil,
+                        reduce carbon emissions, and reeduce waste. All of
+                        these things are greatly needed for a healthy future
+                        for ourselves and the planet.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="sec stats">
+    <div class="content">
+        <div class="mxw800p">
+            <h3>Turning Dreams Into Reality</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Mollitia nobis voluptate aliquid excepturi facere cumque.
+                Ratione optio, tempora quos voluptate ducimus sapiente dolore
+                commodi deserunt laboriosam, aperiam, beatae nulla iste?</p>
+        </div>
+        <div class="statsBox">
+            <div class="box">
+                <h2>Dream</h2>
+                <h4>Wish</h4>
+            </div>
+            <div class="box">
+                <h2>Believe</h2>
+                <h4>Create</h4>
+            </div>
+            <div class="box">
+                <h2>Imagine</h2>
+                <h4>Act</h4>
+            </div>
+            <div class="box">
+                <h2>Achieve</h2>
+                <h4>Greatness</h4>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Works-->
+<section class="sec work" id="portfolio">
+    <div class="content">
+        <div class="mxw800p">
+            <h3>Upcoming Garden Events</h3>
+            <p>Come see us at Gabe's Garden.</p>
+        </div>
+        <div class="workBx">
+            <div class="brand">
+                <a href="{{ url_for('events') }}">
+                    <h2>Volunteer</h2>
+                </a>
+            </div>
+            <div class="brand">
+                <a href="{{ url_for('events') }}">
+                    <h2>Story Time</h2>
+                </a>
+            </div>
+            <div class="brand">
+                <a href="{{ url_for('events') }}">
+                    <h2>Classes</h2>
+                </a>
+            </div>
+            <div class="brand">
+                <a href="{{ url_for('events') }}">
+                    <h2>Parties</h2>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Team Section-->
+<section class="sec" id="team">
+    <div class="content">
+        <div class="mxw800p">
+            <h3>The Team</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Mollitia nobis voluptate aliquid excepturi facere cumque.
+                Ratione optio.?</p>
+        </div>
+        <div class="teamBx">
+            <div class="member">
+                <div class="imgBx">
+                    <img src="static/img/gabe4.jpg" alt="">
+                </div>
+                <div class="details">
+                    <div>
+                        <h2>John Doe<br><span>Creative Director</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="member">
+                <div class="imgBx">
+                    <img src="static/img/cherry.jpg" alt="">
+                </div>
+                <div class="details">
+                    <div>
+                        <h2>John Doe<br><span>Creative Director</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="member">
+                <div class="imgBx">
+                    <img src="static/img/leader.jpg" alt="">
+                </div>
+                <div class="details">
+                    <div>
+                        <h2>John Doe<br><span>Creative Director</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="member">
+                <div class="imgBx">
+                    <img src="static/img/ambitious.jpg" alt="">
+                </div>
+                <div class="details">
+                    <div>
+                        <h2>John Doe<br><span>Creative Director</span></h2>
+                    </div>
+                </div>
+            </div>
+</section>
 {% endblock %}
