@@ -17,15 +17,17 @@
     <header id="header">
         <a href="#" class="logo">Gabe's Garden</a>
         <ul>
-            <li><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
-            <li><a class="nav-link" href="{{ url_for('about') }}">About</a></li>
-            <li><a class="nav-link" href="{{ url_for('events') }}">Events</a></li>
-            <li><a class="nav-link" href="{{ url_for('register') }}">Register</a></li>
-            <li><a class="nav-link" href="{{ url_for('login') }}">Login</a></li>
-            <li><a class="nav-link" href="{{ url_for('register') }}">Contact</a></li>
+            <li><a class="nav-link" href="{{ url_for('index') }}" onclick="toggle()">Home</a></li>
+            <li><a class="nav-link" href="{{ url_for('about') }}" onclick="toggle()">About</a></li>
+            <li><a class="nav-link" href="{{ url_for('events') }}" onclick="toggle()">Events</a></li>
+            <li><a class="nav-link" href="{{ url_for('register') }}" onclick="toggle()">Register</a></li>
+            <li><a class="nav-link" href="{{ url_for('login') }}" onclick="toggle()">Login</a></li>
+            <li><a class="nav-link" href="{{ url_for('register') }}" onclick="toggle()">Contact</a></li>
         </ul>
+        <div class="toggle" onclick="toggle()"></div>
 
     </header>
+
     {% block content %}
     {% endblock %}
     <!-- Contact Forms-->
@@ -67,6 +69,7 @@
             <p class="copyright">Gabe's Garden | Copyright © 2021</p>
         </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 
 </body>
