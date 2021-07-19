@@ -185,6 +185,22 @@ The site has social media links displayed at the footer of the page, as well as 
 
 - **Users do not have an option to choose levels or tasks of the game**
 
+### **Database Structure**
+
+MongoDB was used to set the database for this project
+
+Key      | Value
+---------|-----------
+_id      | ObjectId
+username | String
+password | String
+
+| Key           |  Value        |
+| ------------- |:-------------:| 
+| category_name | string        | 
+| event_name    | string        |
+| event_description| String     |
+| event_date    | String        |
 
 
 ## Technologies ##
@@ -393,10 +409,26 @@ To clone the project:
 <a></a>
 ## Credits ##
 
-### Audio ###
-
 
 ### Images ###
+
+Photo by Artem Beliaikin from Pexels (apple trees)
+
+Photo by Kiana Bosman on Unsplash(future leader)
+
+Photo by Karl Fredrickson on Unsplash(cherry trees)
+
+Photo by Jonathan Borba on Unsplash(ambitious girl)
+
+Hero Image- https://phys.org/news/2018-09-kids-food-gardening.html 
+
+paige-cody-z8gKIE4Kz0Y-unsplash (3) (little boy carrying bucket)
+
+samantha-gades-fIHozNWfcvs-unsplash (1) (outdoor party redhat)
+
+ben-white-4K2lIP0zc_k-unsplash (Smiling boy with book)
+
+
 
 ### Colour ###
 
@@ -427,10 +459,3 @@ I would like to recognize the people who have helped me through this project:
 [Back to content](#contents)
 
 ---
-Photo by Artem Beliaikin from Pexels (apple trees)
-
-Photo by Kiana Bosman on Unsplash(future leader)
-
-Photo by Karl Fredrickson on Unsplash(cherry trees)
-
-Photo by Jonathan Borba on Unsplash(ambitious girl)
