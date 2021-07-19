@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Bigelow+Rules&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -18,20 +19,19 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 100px;
-    z-index: 1000;
     transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 100000;
 }
 
 header.sticky {
     padding: 5px 100px;
     background: #fff;
-    border-bottom: 1px solid rgba(0, 0, 0, .1)
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
 header .logo {
     position: relative;
-    font-family: 'Bigelow Rules', sans-serif, ;
     font-weight: 700;
     color: #fff;
     text-decoration: none;
@@ -63,12 +63,6 @@ header ul li a {
     transition: 0.6s;
 }
 
-
-.spacer {
-    width: 100%;
-    height: 95px;
-}
-
 .banner {
     position: relative;
     width: 100%;
@@ -89,11 +83,11 @@ header ul li a {
 }
 
 .banner h2 span {
-    color: #9dff00;
+    color: #4978ff;
 }
 
-header.sticky.logo,
-header .sticky ul li a {
+header.sticky .logo,
+header.sticky ul li a {
     color: #000;
 }
 
@@ -156,7 +150,7 @@ p {
     background: #fff;
     padding: 20px;
     width: 300px;
-    box-shadow: 0 15 px 30px rgba(0, 0, 0, .05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .05);
 }
 
 .services .box .iconBx {
@@ -181,9 +175,9 @@ p {
     margin-top: -250px;
 }
 
-.stats h3 .stats p {
+.stats h3,
+.stats p {
     color: #fff;
-
 }
 
 .statsBox {
@@ -219,8 +213,7 @@ p {
 
 .workBx .brand {
     position: relative;
-    background: #596896;
-
+    background: #4978ff;
     min-height: 300px;
     width: 250px;
     margin: 0 auto;
@@ -235,10 +228,15 @@ p {
 
 .workBx .brand a {
     text-decoration: none;
-    color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, .4);
     text-transform: uppercase;
     font-size: 14px;
     letter-spacing: 2px;
+}
+
+.workBx .brand:hover a {
+    text-decoration: none;
+    color: #fff;
 }
 
 .teamBx {
@@ -284,15 +282,15 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
+    opacity: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #000;
     transition: 0.2s;
-    opacity: 0;
 }
 
-.teamBx .member:hover .details h2 {
+.teamBx .member:hover .details {
     opacity: 1;
 }
 
@@ -318,35 +316,34 @@ p {
     color: #fff;
 }
 
-.contactForm {
+.conactForm {
     position: relative;
     max-width: 800px;
     margin: 0 auto;
     display: flex;
 }
 
-.contactForm form {
+.conactForm form {
     width: 100%;
 }
 
-.contactForm .row100 {
+.conactForm .row100 {
     display: flex;
     width: 100%;
 }
 
-.contactForm .row100 .inputBx50 {
+.conactForm .row100 .inputBx50 {
     width: 50%;
     margin: 0 20px;
 }
 
-.contactForm .row100 .inputBx100 {
+.conactForm .row100 .inputBx100 {
     width: 100%;
     margin: 0 20px;
-
 }
 
-.contactForm .row100 input,
-.contactForm .row100 text-area {
+.conactForm .row100 input,
+.conactForm .row100 textarea {
     position: relative;
     border: none;
     border-bottom: 1px solid #fff;
@@ -357,23 +354,24 @@ p {
     outline: none;
     font-size: 18px;
     font-weight: 300;
-    margin: 20 px;
+    margin: 20px 0;
     resize: none;
 }
 
-.contactForm .row100 textarea {
-    height: 100 px;
+.conactForm .row100 textarea {
+    height: 100px;
 }
 
-.contactForm .row100 input::placeholder,
-.contactForm .row100 textarea::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-
+.conactForm .row100 input::placeholder,
+.conactForm .row100 textarea::placeholder {
+    color: rgba(255, 255, 255, .5);
 }
 
-.contactForm .row100 input[type="submit"] {
+.conactForm .row100 input[type="submit"] {
     background: #fff;
-    color: 000;
+    color: #000;
+    max-width: 100px;
+    margin: none;
     text-transform: uppercase;
     letter-spacing: 2px;
     cursor: pointer;
@@ -384,6 +382,7 @@ p {
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 50px 0;
 }
 
@@ -415,18 +414,19 @@ p {
 }
 
 .toggle {
-    /*display:none*/
+    display: none;
 }
 
 @media (max-width: 992px) {
     .toggle {
         display: block;
-        position: relative width: 30px;
+        position: relative;
+        width: 30px;
         height: 30px;
         cursor: pointer;
     }
 
-    .toggle::before {
+    .toggle:before {
         content: '';
         position: absolute;
         top: 4px;
@@ -434,6 +434,8 @@ p {
         height: 2px;
         background: #000;
         z-index: 1;
+        box-shadow: 0 10px 0 #000;
+        transition: 0.5s;
     }
 
     .toggle:after {
@@ -442,10 +444,122 @@ p {
         bottom: 4px;
         width: 100%;
         height: 2px;
-        background: #fff;
+        background: #000;
         z-index: 1;
-        box-shadow: 0 10px 0 #fff;
         transition: 0.5s;
+    }
+
+    header.active .toggle:before {
+        top: 14px;
+        transform: rotate(45deg);
+        box-shadow: 0 0 0 #000;
+    }
+
+    header.active .toggle:after {
+        bottom: 14px;
+        transform: rotate(-45deg);
+    }
+
+    header.active .toggle:before {
+        top: 14px;
+        transform: rotate(45deg);
+        box-shadow: 0 0 0 #000;
+    }
+
+    header.active .toggle:after {
+        bottom: 14px;
+        transform: rotate(-45deg);
+    }
+
+    header ul {
+        position: absolute;
+        top: 59px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh);
+        padding: 50px 100px;
+        text-align: center;
+        overflow: auto;
+        visibility: hidden;
+        opacity: 0;
+        /*transform: translateY(-100%);*/
+    }
+
+    header.active ul {
+        display: block;
+        background: #fff;
+        visibility: visible;
+        opacity: 1;
+        /*transform: translateY(0);*/
+    }
+
+    header.active ul li a {
+        margin: 5px 0;
+        font-size: 24px;
+    }
+
+    header,
+    header.sticky {
+        padding: 5px 50px;
+        background: #fff;
+    }
+
+    header .logo,
+    header ul li a {
+        color: #000;
+    }
+
+    .banner {
+        background-position: center;
+    }
+
+    .banner h2 {
+        font-size: 60px;
+        padding: 0 50px;
+    }
+
+    .sec {
+        padding: 100px 50px 50px 50px;
+    }
+
+    h3 {
+        font-size: 36px;
+        line-height: 1em;
+    }
+
+    .services {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
+
+    .services .box {
+        width: 100%;
+    }
+
+    .stats {
+        padding-top: 250px;
+    }
+
+    .conactForm .row100 {
+        flex-direction: column;
+    }
+
+    .conactForm .row100 .inputBx50,
+    .conactForm .row100 .inputBx100 {
+        width: 100%;
+        margin: 0;
+    }
+
+    .sci {
+        margin: 20px;
+    }
+
+    .sci ul li a img {
+        filter: invert(1);
+        max-width: 24px;
+    }
+
+    .workBx .brand {
+        background: #4978ff;
     }
 }
 
@@ -469,16 +583,6 @@ body {
 }
 
 /* -- Classes (cards adapted from www.bootstrap.com)-- */
-.card-img-overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 6rem;
-    padding-bottom: 10rem;
-    border-radius: calc(0.25rem - 1px);
-}
 
 /* -- login page -- */
 
