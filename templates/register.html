@@ -8,5 +8,44 @@
     <div class="spacer">
         &nbsp;
     </div>
+    <section>
+        <div class="container">
+            <div class="user signinBx">
+                <div class="imgBx"><img src="static/img/outdoor-party.jpg"></div>
+                <div class="formBx">
+                    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
+                        <h2>Sign In</h2>
+                        <input type="text" name="username" placeholder="Username">
+                        <input type="password" name="password" minlength="5" maxlength="15" placeholder="Password"
+                            class="validate" required>
+                        <input type="submit" name="submit" value="Login">
+                        <p class="signup">don't have an account? <a href="#" onclick="toggleForm();">Sign up.</a></p>
+                    </form>
+                </div>
+            </div>
+            <div class="user signupBx">
+                <div class="formBx">
+                    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+                        <h2>Create an account</h2>
+                        <input type="text" name="username" placeholder="Username">
+                        <input type="email" name="email address" placeholder="Email Address">
+                        <input type="password" name="password" minlength="5" maxlength="15"
+                            pattern="^[a-zA-Z0-9]{5,15}$" placeholder="Create Password" class="validate" required>
+                        <input type="submit" name="submit" value="Login">
+                        <p class="signup">Already have an account? <a href="#" onclick="toggleForm();">Sign in.</a></p>
+                    </form>
+                </div>
+                <div class="imgBx"><img src="static/img/enter.jpg"></div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        function toggleForm() {
+            var container = document.querySelector('.container');
+            var section = document.querySelector('section');
+            container.classList.toggle('active')
+            section.classList.toggle('active')
+        }
+    </script>
 
     {% endblock %}
