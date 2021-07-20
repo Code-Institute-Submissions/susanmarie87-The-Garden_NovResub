@@ -1,66 +1,191 @@
 {% extends "base.html" %}
 {% block content %}
 
-<img src="assets/images/plants.jpg" class="background-image" alt="colorful background image">
 
-<header>
-    <h1 class="products-title">Events</h1>
+{% for event in events %}
+{{ event.event_name }}<br>
+{{ event.category_name }}<br>
+{{ event.description }}<br>
+{{ event.date }}<br>
+{% endfor %}
+<section class="banner-5" id="register"></section>
+<div class="spacer">
+    &nbsp;
+</div>
 
-    <!-- Product Cards from bootstrap-->
-    <div class="container">
-        <div class="row row-cols-1 row-cols-md-2">
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="assets/images/garden.jpg" class="card-img-top" alt="garden" />
-                    <div class="card-body">
-                        <h5 class="card-title">Volunteer</h5>
-                        <p class="card-bathbombs">
-                            We get by with a little help from our friends. Please join us throughout the month to lend a
-                            helping hand to kids
+<div class="wrapper">
+    <div class="cards_wrap">
+        <div class="card_item">
+            <div class="card_inner">
+                <div class="card_top">
+                    <img src="static/img/volunteer.jpg" alt="car" />
+                </div>
+                <div class="card_bottom">
+                    <div class="card_category">
+                        Volunteer
+                    </div>
+                    <div class="card_info">
+                        <p class="title">10 Best Things about Travel</p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, ab.
                         </p>
-                        <button type="button" class="btn btn-info">Register</button>
+                    </div>
+                    <div class="card_creator">
+                        By Alex Kato
                     </div>
                 </div>
             </div>
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="assets/images/water.jpg" class="card-img-top" alt="water" />
-                    <div class="card-body">
-                        <h5 class="card-title">Water Conservation</h5>
-                        <p class="card-bracelet">
-                            Saving water has become of utmost importancce. Learn the best ways to conserve with our
-                            experts at the garden.
+        </div>
+        <div class="card_item">
+            <div class="card_inner">
+                <div class="card_top">
+                    <img src="static/img/storytime.jpg" alt="car" />
+                </div>
+                <div class="card_bottom">
+                    <div class="card_category">
+                        Storytime in the garden
+                    </div>
+                    <div class="card_info">
+                        <p class="title">10 Best Things about Travel</p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, ab.
                         </p>
-                        <button type="button" class="btn btn-info">Register</button>
+                    </div>
+                    <div class="card_creator">
+                        By Alex Kato
                     </div>
                 </div>
             </div>
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="assets/images/party.jpg" class="card-img-top" alt="party" />
-                    <div class="card-body">
-                        <h5 class="card-title">Celebrate Good Times</h5>
-                        <p class="card-smudge">
-                            Join us in the garden for our monthly garden parties as well as our holiday parties.
+        </div>
+        <div class="card_item">
+            <div class="card_inner">
+                <div class="card_top">
+                    <img src="static/img/planter-box.jpg" alt="car" />
+                </div>
+                <div class="card_bottom">
+                    <div class="card_category">
+                        Regenerative Farming
+                    </div>
+                    <div class="card_info">
+                        <p class="title">10 Best Things about Travel</p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, ab.
                         </p>
-                        <button type="button" class="btn btn-info">Register </button>
+                    </div>
+                    <div class="card_creator">
+                        By Alex Kato
                     </div>
                 </div>
             </div>
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="assets/images/ladybug.jpg" class="card-img-top" alt="ladybug" />
-                    <div class="card-body">
-                        <h5 class="card-title">Little Critter Control</h5>
-                        <p class="card-text">
-                            Learn how to deter, not kill, our insect friends with natural little critter control.
+        </div>
+        <div class="card_item">
+            <div class="card_inner">
+                <div class="card_top">
+                    <img src="static/img/water.jpg" alt="car" />
+                </div>
+                <div class="card_bottom">
+                    <div class="card_category">
+                        Water Conservation
+                    </div>
+                    <div class="card_info">
+                        <p class="title">10 Best Things about Travel</p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, ab.
                         </p>
-                        <button type="button" class="btn btn-info">Register</button>
+                    </div>
+                    <div class="card_creator">
+                        By Alex Kato
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card_item">
+            <div class="card_inner">
+                <div class="card_top">
+                    <img src="static/img/garden-party.jpg" alt="car" />
+                </div>
+                <div class="card_bottom">
+                    <div class="card_category">
+                        Celebrate With Us
+                    </div>
+                    <div class="card_info">
+                        <p class="title">10 Best Things about Travel</p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, ab.
+                        </p>
+                    </div>
+                    <div class="card_creator">
+                        By Alex Kato
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card_item">
+            <div class="card_inner">
+                <div class="card_top">
+                    <img src="static/img/cooking.jpg" alt="car" />
+                </div>
+                <div class="card_bottom">
+                    <div class="card_category">
+                        Farm-To-Table
+                    </div>
+                    <div class="card_info">
+                        <p class="title">10 Best Things about Travel</p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, ab.
+                        </p>
+                    </div>
+                    <div class="card_creator">
+                        By Alex Kato
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card_item">
+            <div class="card_inner">
+                <div class="card_top">
+                    <img src="static/img/tomatoes.jpg" alt="car" />
+                </div>
+                <div class="card_bottom">
+                    <div class="card_category">
+                        Best Growing Practices
+                    </div>
+                    <div class="card_info">
+                        <p class="title">10 Best Things about Travel</p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, ab.
+                        </p>
+                    </div>
+                    <div class="card_creator">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card_item">
+            <div class="card_inner">
+                <div class="card_top">
+                    <img src="static/img/yoga.jpg" alt="car" />
+                </div>
+                <div class="card_bottom">
+                    <div class="card_category">
+                        Yoga At The Garden
+                    </div>
+                    <div class="card_info">
+                        <p class="title">10 Best Things about Travel</p>
+                        <p>
+                            Saturdays and Wednesdays.
+                        </p>
+                        <button class="button button1">Register</button>
+                    </div>
+                    <div class="card_creator">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</header>
+</div>
+
+
+
 
 {% endblock %}
