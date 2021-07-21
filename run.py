@@ -24,9 +24,9 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/about")
-def about():
-    return render_template("about.html")
+@app.route("/profile")
+def profile():
+    return render_template("profile.html")
 
 
 @app.route("/events")
@@ -54,10 +54,10 @@ def login():
                 # invalid password  
                 flash("Incorrect Username or Password") 
                 return redirect(url_for("login"))
-    else:
-        #username doesn't exist
-        flash("Incorrect Username or Password")
-        return redirect(url_for("login"))
+        else:
+            #username doesn't exist
+            flash("Incorrect Username or Password")
+            return redirect(url_for("login"))
 
     return render_template("login.html")
 
