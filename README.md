@@ -55,7 +55,7 @@ The **goal**
 
 ### User Stories ###
 * As a user, I want to easily understand what the website is about.
-* As a user, I want to see what is growing in the garden.
+* As a user, I want to easily be able to navigate the site.
 * As a user, I want to see how the fruits and vegetables are being used in recipes.
 * As a user, I want to be able to register as a member.
 * As a user, I want a "Forgot Password" option in case I forget my password.
@@ -236,7 +236,16 @@ password | String
 
 ### NAVIGATION BAR
 
-User story: As a user i want to be able to register as a member.
+User Story: As a user, I want to easily be able to navigate the site.
+* **PLAN**
+I plan to have a navbar that sticks out 
+* **IMPLEMENTATION**
+* **TEST**
+
+
+### Registration 
+
+User story: As a user I want to be able to register as a member.
 
 * **PLAN**
 
@@ -304,9 +313,35 @@ In order to implement this CRUD function.
 
 * **Bug**
 
+
 * **Fix**
 
 * **Verdict**
+
+* **Bug**
+
+Initially after setting up the login page and functionality the page would throw an error when clicked. The error received ws "too many redirects".
+
+* **Fix**
+
+The reason for  the error turned out to be a simple indentation fix. The else statement was too far back causing the the get request to contantly redirect to itself.
+
+* **Verdict**
+
+Indentation in Python is key.
+
+* **Bug**
+
+Initial Heroku deployment was succesful. Shortly after , the app crashed. The error returned was "State changed from starting to crashed" and
+"Process exited with status 1."
+
+* **Fix**
+
+This error was caused by improper syntax in my "if os.path.exists("env.py")" statement in my env.py file. This was a minor bug and was easily fixed y adding a colon after the if statement.
+
+* **Verdict**
+
+Proper syntax is imperative in code.
 
 <a></a>
 
@@ -428,6 +463,13 @@ samantha-gades-fIHozNWfcvs-unsplash (1) (outdoor party redhat)
 
 ben-white-4K2lIP0zc_k-unsplash (Smiling boy with book)
 
+Photo by Anna Earl on Unsplash(volunteer)
+
+Photo by Dorota Dylka on Unsplash(yoga)
+
+https://codepen.io/RajRajeshDn/pen/qBEGeEp(cards)
+
+https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog(website template)
 
 
 ### Colour ###
