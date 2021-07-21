@@ -30,11 +30,11 @@
         <a href="#" class="logo">Gabe's Garden</a>
         <ul>
             <li><a class="nav-link" href="{{ url_for('index') }}" onclick="toggle()">Home</a></li>
-            <li><a class="nav-link" href="{{ url_for('profile') }}" onclick="toggle()">About</a></li>
+            <li><a class="nav-link" href="{{ url_for('profile', username=session['user']) }}"
+                    onclick="toggle()">Profile</a></li>
             <li><a class="nav-link" href="{{ url_for('events') }}" onclick="toggle()">Events</a></li>
             <li><a class="nav-link" href="{{ url_for('register') }}" onclick="toggle()">Register</a></li>
             <li><a class="nav-link" href="{{ url_for('login') }}" onclick="toggle()">Login</a></li>
-            <li><a class="nav-link" href="{{ url_for('register') }}" onclick="toggle()">Contact</a></li>
         </ul>
         <div class="toggle" onclick="toggle()"></div>
 
@@ -49,7 +49,7 @@
                 <h3>Send Us A Message</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
-            <div class="conactForm">
+            <div class="contactForm">
                 <form>
                     <div class="row100">
                         <div class="inputBx50">
