@@ -101,7 +101,43 @@ Monda was chosen the paragraphs and information throughout the site. This style 
 #A23131 This color will be used for the nav and footer.
 
 ![Color Scheme](assets/images/color-scheme.png)
-#### Wireframes ####
+
+[Back to Top](#table-of-contents)
+
+
+---
+<a></a>
+
+
+## **Wireframes**
+
+#### Landing Page Wireframes
+
+- For the landing page, I went with a simple hero image with bold writing overlaying the top.
+
+
+![Landing Page](static/img/landing.png)
+
+---
+
+<a></a>
+
+## Footer and Contact Form
+
+#### The footer is essentially a contact form. The footer also displays links to social media and copyright information.
+
+![Contact Form](static/img/contact.png)
+
+---
+
+<a></a>
+
+## Event Page 
+
+#### The event page will feature an image but the main point of the page will be the cards that display the events seen here.
+
+![Event Page](static/img/event.png)
+
 
 
 ## Features ##
