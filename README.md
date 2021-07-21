@@ -189,18 +189,26 @@ The site has social media links displayed at the footer of the page, as well as 
 
 MongoDB was used to set the database for this project
 
+#### **Users:**
+
 Key      | Value
 ---------|-----------
 _id      | ObjectId
 username | String
 password | String
 
-| Key           |  Value        |
-| ------------- |:-------------:| 
-| category_name | string        | 
-| event_name    | string        |
-| event_description| String     |
-| event_date    | String        |
+#### **Events:**
+
+Key              | Value
+-----------------|-----------
+_id              | ObjectId
+catergory_name   | String
+event_name       | String
+event_description| String
+event_date       | String
+event_time       | String
+
+
 
 
 ## Technologies ##
