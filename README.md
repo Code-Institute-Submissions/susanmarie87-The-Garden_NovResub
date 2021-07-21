@@ -1,5 +1,5 @@
 # Gabe’s Garden #
-Welcome to Gabe's garden. Fed up with America's food choices in the cafeteria's across schools nationwide, 12-year-old Gabe has set out on a mission to change the way kids eat. Gabe's idea is to have a Garden that is grown, cultivated, and maintained all by the students. The harvest will then be used for delicious and nutritious recipes in the our school's cafeterias created and hopefully cooked, by the students. The goal is to inspire as many schools as possible to begin their own garden's providing **real** nutrition to our children again and not being served the normalized frankenfood which is surely contributing to the childhood chronic illness epidemic across the United States.
+Welcome to Gabe's garden. Fed up with America's food choices in the cafeteria's across schools nationwide, 12-year-old Gabe has set out on a mission to change the way kids eat. Gabe's idea is to have a garden that is grown, cultivated, and maintained  by the students. The harvest will then be used for delicious and nutritious recipes in the our school's cafeterias created and hopefully cooked, by the students. The goal is to inspire as many schools as possible to begin their own garden's providing **real** nutrition to our children again and not being served the normalized frankenfood which is surely contributing to the childhood chronic illness epidemic across the United States.
 *[](https://.github.io/ /) 
 
 ---
@@ -47,9 +47,8 @@ The **goal**
 ### User Goals ###
 
 - **Learn about the mission of Gabe's Garden** 
-- **Find out what's growin in the garden** 
-- **See what recipes are our favorite for each vegetable and fruit**
-- **Learn how to become a member** 
+- **Signup on the website**
+- **See what events are being offered at the garden** 
 - **Sign up to volunteer their time at the garden** 
 - **Contact** 
 
@@ -131,7 +130,7 @@ Monda was chosen the paragraphs and information throughout the site. This style 
 
 - Gabe's Garden index page will feature an image of a group of kids excited and happy to be growing their own vegetables.
 
-## Events?
+## Events
 
 Gabe's Garden will look to host events that will inspire guests of all ages. Events will include: classes, parties, festivals, and much more. The events page will look simialr to index page with a different image and cards that will display upcoming events. The cards will display two buttons. An "add" button and a "remove" button. This way users can easily add the event to their profile so they can keep their schedules organized accordingly.
 
@@ -140,6 +139,10 @@ Gabe's Garden will look to host events that will inspire guests of all ages. Eve
 
 ## SignUp
 - Similar to the login page, the user will be met with a form. This will ask for basic information an email and password. 
+
+## Profile
+
+- Users will have a very simple profile where they can add or delete the events they have signed up for.
 
 ## Features Implemented ###
 
