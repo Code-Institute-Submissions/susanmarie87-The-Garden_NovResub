@@ -109,43 +109,31 @@ Monda was chosen the paragraphs and information throughout the site. This style 
 
 ## Existing Features
 - Navbar
-    - The navigation bar will display Gabe's Garden logo on the top right corner.
-    - The navbar will look different depending on whether or not the user is logged in.
-    * If the user is logged in, the site will display their name.
-    * If the user is not logged in, the site will display "My account"
+    - The navigation bar will display Gabe's Garden logo on the top left corner.
+    - The navbar will display page links on the right side.
+    - The navbar will break down into a hamburger to become mobile responsive.
 
     - The navbar will display the links to the pages which are:
         1. Home
-        2. What's Growing?
-        3. Recipes
         4. Events
         5. LogIn
         6. SignUp
         
 - Footer
     - The footer features:
-          - Quick links to each page.
-          - A display of upcoming events.
+          - Contact Form
           - Social media links
           - Copyright information
 
 ### Index Page
 
 **Hero Image**
-- Gabe's Garden index page will feature an image of a young boy surrounded by his crops that he has helped grow. The fruits and vegetables will be bright and vividly colored. 
 
-
-## What's Growing? Page
-
-Upon entering the What's Growing? Page, Users will be greeted with cards of all of the items growing in the garden. In the description, the user's wi;; have the option to click on the recipe which will bring them to the recipe page or a card will pop up with the recipe. This is feature has not yet been decided.
-
-## Recipes
-
-The recipe  will be linked to the specific vegetable or fruit from the garden. All recipes are intented to be kid-friendly and easy to make in the event that schools do adopt the policy of children helping in the kitchen which is one of the main goals. I have not quite decided on whether or not to have a popup card come up on the page with the recipe or if the link will take the user to a recipe page.
+- Gabe's Garden index page will feature an image of a group of kids excited and happy to be growing their own vegetables.
 
 ## Events?
 
-Gabe's Garden will look to host events that will inspire guests of all ages. Events will include: classes, parties, festivals, and much more. The events page will look simialr to index page with a different image and cards that will display upcoming events. 
+Gabe's Garden will look to host events that will inspire guests of all ages. Events will include: classes, parties, festivals, and much more. The events page will look simialr to index page with a different image and cards that will display upcoming events. The cards will display two buttons. An "add" button and a "remove" button. This way users can easily add the event to their profile so they can keep their schedules organized accordingly.
 
 ## LogIn
 - The login page will be a form with two inputs. One input will be for their email and the second input will be their password. 
@@ -154,6 +142,10 @@ Gabe's Garden will look to host events that will inspire guests of all ages. Eve
 - Similar to the login page, the user will be met with a form. This will ask for basic information an email and password. 
 
 ## Features Implemented ###
+
+The features to be implemented will be a reminder notification to the user's email to remind them of their upcoming event.
+
+Another feature to be implemented will  be a donation link capable of accepting donations.
 
 - **Responsive design**
 
