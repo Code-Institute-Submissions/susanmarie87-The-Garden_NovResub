@@ -97,6 +97,12 @@ def profile(username):
 def contact():
     return render_template("contact.html")
 
+@app.errorhandler(404)
+def page_not_found(e):
+    # 404 error brings user to a custom page
+
+    return render_template('pages/404.html'), 404
+
 
 if __name__ == "__main__":
     app.run(
