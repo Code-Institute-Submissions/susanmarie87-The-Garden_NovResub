@@ -83,7 +83,7 @@ header ul li a {
 }
 
 .banner h2 span {
-    color: #4978ff;
+    color: rgb(64, 241, 123);
 }
 
 header.sticky .logo,
@@ -94,8 +94,8 @@ header.sticky ul li a {
 .sec {
     background: #fff;
     padding: 100px;
-    min-height: 100vh;
     display: flex;
+    margin-bottom: 120px;
     justify-content: center;
     align-items: center;
 }
@@ -427,7 +427,7 @@ p {
     }
 
     .toggle:before {
-        content: 'On A Mission';
+        content: '';
         position: absolute;
         top: 4px;
         width: 100%;
@@ -439,7 +439,7 @@ p {
     }
 
     .toggle:after {
-        content: 'To Change Nutrition';
+        content: '';
         position: absolute;
         bottom: 4px;
         width: 100%;
@@ -564,17 +564,12 @@ p {
 }
 
 /* -- login page -- */
-.form-container {
-    position: relative;
-    justify-content: center;
-    align-items: center;
-}
+
 
 /*Register and Login Form*/
 section {
     position: relative;
-    min-height: 50vh;
-    background: #557085;
+    background: url('../img/backgroud.jpg');
     display: flex;
     padding: 20px;
     justify-content: center;
@@ -588,8 +583,8 @@ section.active {
 
 section .container {
     position: relative;
-    width: 1000px;
-    height: 800px;
+    width: 800px;
+    height: 600px;
     background: #fff;
     box-shadow: 0 15px 50px rgba(0, 0, 0, .1);
     overflow: hidden;
@@ -842,6 +837,48 @@ img {
         width: 100%;
     }
 }
+
+/* Buttons On Event Cards*/
+
+.button1 {
+    border: black;
+    color: white;
+    padding: 10px 15px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 4px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: cadetblue color;
+    color: black;
+    border: 2px solid cadetblue;
+}
+
+
+.button2 {
+    border: black;
+    color: white;
+    padding: 10px 15px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 4px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button2 {
+    background-color: cadetblue color;
+    color: black;
+    border: 2px solid cadetblue;
+}
+
 
 .flashes h4 {
     line-height: 2;
