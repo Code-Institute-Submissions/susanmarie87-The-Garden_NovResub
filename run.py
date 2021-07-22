@@ -62,17 +62,17 @@ def login():
     if request.method == "POST":
         # check for existing username
         existing_user = mongo.db.users.find_one(
-             {"username": request.form.get("username").lower()})
+            {"username": request.form.get("username").lower()})
 
         if existing_user:
             # ensure hashed password matches user input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                   session["user"] = request.form.get("username").lower()
-                   flash("Welcome, {}".format(
-                       request.form.get("username")))
-                   return redirect(url_for(
-                       "profile", username=session["user"]))
+                    existing_user["password"], request.form.get("password")):
+                        session["user"] = request.form.get("username").lower()
+                        flash("Welcome, {}".format(
+                            request.form.get("username")))
+                        return redirect(url_for(
+                            "profile", username=session["user"]))
             else:
                 # invalid password  
                 flash("Incorrect Username or Password") 
@@ -90,6 +90,25 @@ def profile(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
+
+    if session["user"]:  
+        return render_template("profile.html", username=username)
+
+    return redirect(url_for("login"))
+
+
+@app.route("/logout")
+def logout():
+
+    flash("You are logged out")
+    session.pop("user")
+    return redirect(url_for("login"))
+
+
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
+    
 
 
 """""
