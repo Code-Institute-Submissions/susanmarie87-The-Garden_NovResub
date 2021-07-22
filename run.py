@@ -5,7 +5,7 @@ from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask import (
     Flask, flash, render_template,
-    redirect, request, session, url_for) 
+    redirect, request, session, url_for)
 if os.path.exists("env.py"):
     import env
 
@@ -62,8 +62,8 @@ def login():
     if request.method == "POST":
         # check for existing username
         existing_user = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()})
-
+            {"username": request.form.get("username")})
+        print(existing_user)
         if existing_user:
             # ensure hashed password matches user input
             if check_password_hash(
@@ -74,9 +74,10 @@ def login():
                         return redirect(url_for(
                             "profile", username=session["user"]))
             else:
-                # invalid password  
+                # invalid password 
+                print("wrong password")
                 flash("Incorrect Username or Password") 
-                return redirect(url_for("login"))
+                # return redirect(url_for("index"))
         else:
             # username doesn't exist
             flash("Incorrect Username or Password")
@@ -104,6 +105,21 @@ def logout():
     session.pop("user")
     return redirect(url_for("login"))
 
+"""
+@app.route("/add_event", methods=["GET", "POST"])
+def add_task)():
+    if request.method == "POST":
+        "event"
+
+
+@app.route("/add_event")
+def add_event():
+    if request.method == "POST":
+        mongo.db.events.insert_one(request.form.to_dict())
+    events= mongo.db.events.find().sort("event_name", 1)
+    return render_template("add_event.html", events=events)
+"""
+ 
 
 @app.route("/contact")
 def contact():
@@ -124,7 +140,8 @@ def contact():
 
     # return render_template('pages/500.html'), 500
 """    
- 
+
+
 if __name__ == "__main__":
     app.run(
         host=os.environ.get("IP", "0.0.0.0"),
