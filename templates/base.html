@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="#">
-    <link href="@import url('https://fonts.googleapis.com/css2?family=Bigelow+Rules&display=swap');" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.cssrel=">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
     <link rel=" stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" type="text/css" />
@@ -30,11 +29,15 @@
         <a href="#" class="logo">Gabe's Garden</a>
         <ul>
             <li><a class="nav-link" href="{{ url_for('index') }}" onclick="toggle()">Home</a></li>
+            <li><a class="nav-link" href="{{ url_for('events') }}" onclick="toggle()">Events</a></li>
+            {% if session.user%}
             <li><a class="nav-link" href="{{ url_for('profile', username=session['user']) }}"
                     onclick="toggle()">Profile</a></li>
-            <li><a class="nav-link" href="{{ url_for('events') }}" onclick="toggle()">Events</a></li>
-            <li><a class="nav-link" href="{{ url_for('register') }}" onclick="toggle()">Register</a></li>
+            <li><a class="nav-link" href="{{ url_for('logout') }}" onclick="toggle()">Logout</a></li>
+            {% else %}
             <li><a class="nav-link" href="{{ url_for('login') }}" onclick="toggle()">Login</a></li>
+            <li><a class="nav-link" href="{{ url_for('register') }}" onclick="toggle()">Register</a></li>
+            {% endif %}
         </ul>
         <div class="toggle" onclick="toggle()"></div>
 
