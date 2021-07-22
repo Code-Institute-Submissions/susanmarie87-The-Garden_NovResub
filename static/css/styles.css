@@ -63,6 +63,7 @@ header ul li a {
     transition: 0.6s;
 }
 
+/* HERO IMAGE */
 .banner {
     position: relative;
     width: 100%;
@@ -83,7 +84,7 @@ header ul li a {
 }
 
 .banner h2 span {
-    color: rgb(64, 241, 123);
+    color: #009999;
 }
 
 header.sticky .logo,
@@ -213,7 +214,7 @@ p {
 
 .workBx .brand {
     position: relative;
-    background: #4978ff;
+    background: #009999;
     min-height: 300px;
     width: 250px;
     margin: 0 auto;
@@ -307,6 +308,7 @@ p {
     font-weight: 300;
 }
 
+/* Contact Form */
 .contact {
     background: #000;
 }
@@ -378,6 +380,7 @@ p {
     font-weight: 500;
 }
 
+/* SOCIAL MEDIA LINKS */
 .sci {
     position: relative;
     display: flex;
@@ -416,6 +419,8 @@ p {
 .toggle {
     display: none;
 }
+
+/* mEDIA QUERIES */
 
 @media (max-width: 992px) {
     .toggle {
@@ -470,6 +475,7 @@ p {
         bottom: 14px;
         transform: rotate(-45deg);
     }
+
 
     header ul {
         position: absolute;
@@ -559,11 +565,9 @@ p {
     }
 
     .workBx .brand {
-        background: #4978ff;
+        background: #009999;
     }
 }
-
-/* -- login page -- */
 
 
 /*Register and Login Form*/
@@ -716,6 +720,7 @@ section .container.active .signinBx .imgBx {
     top: -100%;
 }
 
+/* MEDIA QUERIES FOR LOGIN FORM */
 
 @media (max-width: 991px) {
     section .container {
@@ -816,6 +821,7 @@ img {
     text-align: center;
 }
 
+/* MEDIA QUERIES FOR CARDS */
 @media (max-width: 1024px) {
     .cards_wrap .card_item {
         width: 33.3%;
@@ -879,7 +885,19 @@ img {
     border: 2px solid cadetblue;
 }
 
-
+/* FLASH MESSAGES */
 .flashes h4 {
     line-height: 2;
+}
+
+/*404 Error Page */
+.container-404 {
+    min-height: 100 vh;
+    background-image: linear-gradient(125deg, #009999, #ddebeb);
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #343434;
 }
