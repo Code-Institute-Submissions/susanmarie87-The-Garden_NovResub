@@ -32,6 +32,31 @@ def events():
     return render_template("events.html", event=events)
 
 
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    if request.method == "POST":
+        # check if username already exists in db
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            flash("Username already exists")
+            return redirect(url_for("register"))
+
+        register = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        mongo.db.users.insert_one(register)
+
+        # put the new user into 'session' cookie
+        session["user"] = request.form.get("username").lower()
+        flash("Registration Successful!")
+        return redirect(url_for("profile", username=session["user"]))
+
+    return render_template("register.html")
+
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -60,52 +85,30 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/register", methods=["GET", "POST"])
-def register():
-    if request.method == "POST":
-        # check if username already exists in db
-        existing_user = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()})
-
-        if existing_user:
-            flash("Username already exists")
-            return redirect(url_for("register"))
-
-        register = {
-            "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password"))
-        }
-        mongo.db.users.insert_one(register)
-
-        # put the new user into 'session' cookie
-        session["user"] = request.form.get("username").lower()
-        flash("Registration Successful!")
-        return redirect(url_for("profile", username=session["user"]))
-
-    return render_template("register.html")
-
-
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-     # grab the session user's username from db
+    # grab the session user's username from db
     username = mongo.db.users.find_one(
-       {"username": session["user"]})["username"]
-    return render_template("profile.html", username=username)
+        {"username": session["user"]})["username"]
 
 
-@app.route("/contact")
-def contact():
-    return render_template("contact.html")
+"""""
+ @app.errorhandler(404)
+ def page_not_found(e):
+     404 error brings user to error page
 
-@app.errorhandler(404)
-def page_not_found(e):
-    # 404 error brings user to a custom page
+     return render_template('pages/404.html'), 404
 
-    return render_template('pages/404.html'), 404
+# @app.errohandler(500)
+# def internal_error(err):
+    # 500 error brings user to error page
 
-
+    # return render_template('pages/500.html'), 500
+"""    
+ 
 if __name__ == "__main__":
     app.run(
         host=os.environ.get("IP", "0.0.0.0"),
         port=int(os.environ.get("PORT", "5000")),
         debug=True) 
+        
