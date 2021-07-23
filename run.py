@@ -111,15 +111,17 @@ def add_events():
         "event"
 """
 
-@app.route("/register_events" methods=["GET", "POST"]) 
+@app.route("/register_events", methods=["GET", "POST"]) 
 def register_events(): 
-    """
+
     if request.method == "POST":
-        mongo.db.events.insert_one(request.form.to_dict())
-    events= mongo.db.events.find().sort("event_name", 1)
-    return render_template("register_event.html", events=events)
-    """
-    print(request.form.to.dict())
+        registration = {
+            "username": session["user"],                                                                        
+            "event_id": request.form.get("event_id")
+        }
+        mongo.db.registration.insert_one(registration)
+    flash("You're successfully registered!")
+    return redirect(url_for("profile", username=session ["user"]))
 
 
 @app.route("/contact")
