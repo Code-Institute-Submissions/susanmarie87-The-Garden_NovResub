@@ -126,7 +126,6 @@ p {
     letter-spacing: 1px;
 }
 
-
 .services {
     position: relative;
     display: grid;
@@ -585,10 +584,6 @@ section {
     transition: 0.5s;
 }
 
-section.active {
-    background: #5a5a5a;
-}
-
 section .container {
     position: relative;
     width: 800px;
@@ -848,6 +843,17 @@ img {
     .cards_wrap .card_item {
         width: 100%;
     }
+}
+
+.banner-2 {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url('../img/garden-kids.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Buttons On Event Cards*/
