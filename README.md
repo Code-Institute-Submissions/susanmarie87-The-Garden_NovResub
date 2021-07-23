@@ -146,8 +146,8 @@ View original wireframes here:
         - LogIn
         - SignUp
         
- 2. Footer
-    - The footer is 
+ 2. Contact Form
+    - The  contact form acts as both a contact form and footer.
 
           - Contact Form
           - Social media links
@@ -289,116 +289,81 @@ event_time       | String
 
 ## **TESTING**
 
-### NAVIGATION BAR
+### UI
 
-User Story: As a user, I want to easily be able to navigate the site.
-* **PLAN**
-I plan to have a navbar that sticks out 
-* **IMPLEMENTATION**
-* **TEST**
+1. Navigation
+    - Hovering over each link has the desired response from the nav bar
+    - Home takes the user to the *Home* page as expected
+    - Create a character takes the user to the *Create* page as expected
+    - Party takes the user to the *Party* page as expected
+    - Account takes the user to the *Account* page as expected
+    - Sign Out logs the user out of their session returning them to *Home*
+    - When not logged a user trying to access a page for logged in users returns custom 500 error page
+    - When user tries to access an unavailable address a custom 404 message is displayed
 
+2. Footer
+    - Each text element displays as expected in the correct position
+    - The icons link to their respective profile pages (Facebook, Github, Instagram)
+    - Footer displays in the correct location on each page of the site
+    - Link for Github works as expected redirecting to the correct site
+    - Other links are inactive and don't leave the site as expected
 
-### Registration 
+3. Loading Spinner
+    - The loading spinner displays when loading additional information from the external API as displays correctly until all information is loaded
+    - Animation is as expected without stutter or 'hiccup'
 
-User story: As a user I want to be able to register as a member.
+### Functionality 
 
-* **PLAN**
+1. Add An Event
+    - The user should be able to add a desired event.
+    - This can be completed by a register button on the form link.
+    - 
+    - Username is a required field and the custom alert functions flags as expected.
 
-In order for users to be able to interact with the garden, there should be a feature on the website that allows them to be able to register their account.
-This way, they wil be able to add or delete events at the garden. 
+2. Party
+    - 
 
-* **IMPLEMENTATION**
+3. Edit
+    - 
 
-There has been a registration page created with a form where the user must enter the basic information. Their username and password will be set up with minimum pattern requirements. Error messages will appear when the user has incorrectly entered information that does not match the correct patterns. after a successful login. The user will be greeted with a hello,(username) atop the page. The user will be able to RSVP for garden events
+4. Register
+    - 
+5. Login/log out
+    - 
 
-* **TEST**
+### Responsive Design
 
-* **RESULT**
+1. Mobile
+    - All pages tested on Android and current iOS platforms and returns as expected.
+    - 
+    - 
 
-### Sign In
+2. Tablet
+    - 
 
-* **PLAN**
+3. Desktop
+    - Tested with Safari & Chrome
+    - All items load as expected
+    - Navbar working and displaying correctly
+    - No overflow issues experienced
+    - All items in correct positioning. 
 
-The user should be able to fill out a form with their username and password. After signing in, their username will be displayed on the top and they shoud be directed to a page where they can see if they have any upcoming events. 
-
-* **IMPLEMENTATION**
-
-A sign in form has been created where the user fills out their username and password. This information will be verified by the database. If the wrong information is entered, there will be an error flash message sent to the user. 
-
-* **TEST**
-
-* **RESULT**
-
-### Forgot Password 
-
-* **PLAN**
-
-I plan on adding in a "Forgot password" option in the event that a user has forgotten their password
-
-* **IMPLEMENTATION**
-
-* **TEST**
-
-### RSVP for an event
-
-User story: AS a user, I would like the option to RSVP for an event.
-
-* **PLAN**
-My plan is to give users the option to RSVP for events at the garden. 
-
-* **IMPLEMENTATION**
-
-To implement this, I will create
-
-* **TEST**
-
-### Delete event
-
-User story: As a user, I would like the option to delete an event.
-
-* **PLAN**
-The plan is to setup an option where the usere can delete and event they had orginally signed up for in the case that they are unable to make it.
-* **IMPLEMENTATION**
-In order to implement this CRUD function.
-* **TEST**
-
-[Back to Top](#table-of-contents)
-
-### BUGS
-
-* **Bug**
+### Issues and resolutions
+---
+* Problem: 
+* Cause: 
+* Resolution: 
+---
+* 
+---
 
 
-* **Fix**
-
-* **Verdict**
-
-* **Bug**
-
-Initially after setting up the login page and functionality the page would throw an error when clicked. The error received ws "too many redirects".
-
-* **Fix**
-
-The reason for  the error turned out to be a simple indentation fix. The else statement was too far back causing the the get request to contantly redirect to itself.
-
-* **Verdict**
-
-Indentation in Python is key.
-
-* **Bug**
-
-Initial Heroku deployment was succesful. Shortly after , the app crashed. The error returned was "State changed from starting to crashed" and
-"Process exited with status 1."
-
-* **Fix**
-
-This error was caused by improper syntax in my "if os.path.exists("env.py")" statement in my env.py file. This was a minor bug and was easily fixed y adding a colon after the if statement.
-
-* **Verdict**
-
-Proper syntax is imperative in code.
-
-<a></a>
+### Unresolved Issues
+---
+* 
+* 
+* 
+---
 
 ## **Deployment**
 
