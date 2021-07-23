@@ -1,29 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
 
+{% for event in event %}
+{{ event.event_name }}<br>
+{{ event.category_name }}<br>
+{{ event.description }}<br>
+{{ event.date }}<br>
+{% endfor %}
 
-<div class="wrapper">
-    <div class="cards_wrap">
-        <div class="card_item">
-            <div class="card_inner">
-                <div class="card_top">
-                    <img src="static/img/volunteer.jpg" alt="car" />
-                </div>
-                <div class="card_bottom">
-                    <div class="card_category">
-                        {{ username }}'s Profile
-                    </div>
-                    <div class="card_info">
-                        <p class="title">Volunteer With Us</p>
-                        <p>
-                            Everyday.
-                        </p>
-                        <button class="button button1" name="">Register</button>
-                        <button class="button button1" name="">Register</button>
-                    </div>
-                </div>
-            </div>
+<section>
+    <div class="container">
+        <div class="user profile">
+            <div class="profile"><img src="static/img/enter.jpg"></div>
+
+            <h3 class="profile">Welcome, {{ username }}</h3>
+
         </div>
+    </div>
+</section>
 
 
-        {% endblock %}
+
+{% endblock %}
