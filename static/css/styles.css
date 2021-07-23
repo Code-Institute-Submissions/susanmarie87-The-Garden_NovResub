@@ -84,7 +84,7 @@ header ul li a {
 }
 
 .banner h2 span {
-    color: #009999;
+    color: #66eeee;
 }
 
 header.sticky .logo,
@@ -126,15 +126,6 @@ p {
     letter-spacing: 1px;
 }
 
-.btn {
-    position: relative;
-    display: inline-block;
-    padding: 10px 30px;
-    border: 1px solid #000;
-    text-decoration: none;
-    background: #000;
-    color: #fff;
-}
 
 .services {
     position: relative;
@@ -569,6 +560,19 @@ p {
     }
 }
 
+/*Profile*/
+.banner-3 {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url('../img/garden-party.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 /*Register and Login Form*/
 section {
@@ -798,6 +802,7 @@ img {
 
 .cards_wrap .card_bottom {
     padding: 15px;
+
 }
 
 .cards_wrap .card_bottom .card_category {
@@ -819,6 +824,7 @@ img {
 
 .cards_wrap .card_bottom .card_creator {
     text-align: center;
+
 }
 
 /* MEDIA QUERIES FOR CARDS */
