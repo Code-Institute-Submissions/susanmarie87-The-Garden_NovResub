@@ -64,6 +64,8 @@ The **goal**
 * As a user, I want to be able to contact the organization with questions or concerns.
 * As a user, I want to be able to delete an event that I signed up for if something changes.
 
+<a></a>
+
 ### Site Owner Goals ###
 * As a site owner, I want to create an interactive environment for all demographics.
 * As a site owner, i want to make sure people are inspired to start their own garden.
@@ -82,6 +84,11 @@ The **goal**
 * The recipes section should provide 
 * The event calendar should work with signup events. 
 
+
+[Back to Top](#table-of-contents)
+
+<a></a>
+
 ### Design Choices ###
 
 
@@ -90,15 +97,16 @@ Big Shoulder Stencil display is the font chosen for the Title and headings. This
 
 Monda was chosen the paragraphs and information throughout the site. This style was chosen as it seems that the two fonts will compliment each other nicely. They wont be too different yet both are bold and stand out. i want the font to grasp the user's attention from the moment they hit the landing page and Monda paired with Big Shoulder Stencil Family is the perfect match.
 
+<a></a>
+
 #### Colours ####
 
-#A1DD70 This bright lime greencolor will be used for the bottom container of the website to make it stand out.
- 
-#E8ECD6 This will be the filler color throughout the site.  
+An array of colors were used throughout the site. In the spirit of simplicity though, the predominant colors on the site are white and black.
 
-#FDFFF0 This color will be used as the break point between the red nav and footer and the green containers. 
+Since the images are what the users should focus on most, white and black seemed to be the best approach.
 
-#A23131 This color will be used for the nav and footer.
+Laid sporatically  through the site however, you will find hints of greenish-blues such as: #009999.
+This color went beautifully on the site. It nicely breaks up the black and white without being visually straining to eyes.
 
 ![Color Scheme](assets/images/color-scheme.png)
 
@@ -111,71 +119,85 @@ Monda was chosen the paragraphs and information throughout the site. This style 
 
 ## **Wireframes**
 
-#### Landing Page Wireframes
-
-- For the landing page, I went with a simple hero image with bold writing overlaying the top.
+#### Original Wireframes
 
 
-![Landing Page](static/img/landing.png)
+View original wireframes here:
 
+[Wireframes](static/wireframes/g-garden.pdf)
 ---
 
 <a></a>
-
-## Footer and Contact Form
-
-#### The footer is essentially a contact form. The footer also displays links to social media and copyright information.
-
-![Contact Form](static/img/contact.png)
-
----
-
-<a></a>
-
-## Event Page 
-
-#### The event page will feature an image but the main point of the page will be the cards that display the events seen here.
-
-![Event Page](static/img/event.png)
-
-
 
 ## Features ##
 
+<a></a>
+
 ## Existing Features
-- Navbar
+
+1. Navbar
     - The navigation bar will display Gabe's Garden logo on the top left corner.
     - The navbar will display page links on the right side.
     - The navbar will break down into a hamburger to become mobile responsive.
-
     - The navbar will display the links to the pages which are:
-        1. Home
-        4. Events
-        5. LogIn
-        6. SignUp
+
+        - Home
+        - Events
+        - LogIn
+        - SignUp
         
-- Footer
-    - The footer features:
+ 2. Footer
+    - The footer is 
+
           - Contact Form
           - Social media links
           - Copyright information
 
-### Index Page
+<a></a>
 
-**Hero Image**
 
-- Gabe's Garden index page will feature an image of a group of kids excited and happy to be growing their own vegetables.
+For the landing page, I went with a simple hero image with bold writing overlaying the top.
+
+#### Landing Page 
+
+- Hero Image
+
+    - Gabe's Garden index page will feature an image of a group of kids excited and happy to be growing their own vegetables.
+
+    * ![Landing Page](static/img/landing.png)
+
+    <a></a>
+
+## Footer and Contact Form
+
+ The footer is essentially a contact form. The footer also displays links to social media and copyright information.
+
+* ![Contact Form](static/img/contact.png)
 
 ## Events
+ The event page will feature an image but the main point of the page will be the cards that display the events seen here.
 
-Gabe's Garden will look to host events that will inspire guests of all ages. Events will include: classes, parties, festivals, and much more. The events page will look simialr to index page with a different image and cards that will display upcoming events. The cards will display two buttons. An "add" button and a "remove" button. This way users can easily add the event to their profile so they can keep their schedules organized accordingly.
+- The site includes an event page.
+   - Events will include: 
+   - classes, parties, festivals, and much more.
 
-## LogIn
-- The login page will be a form with two inputs. One input will be for their email and the second input will be their password. 
 
-## SignUp
-- Similar to the login page, the user will be met with a form. This will ask for basic information an email and password. 
+* ![Event Page](static/img/event.png)
 
+---
+
+
+  Events will be displayed on cards with two buttons. One to register and one to remove the event.
+
+## Log In Page
+
+- The login page will be a form with two inputs:
+
+  - Name
+  - Password
+
+## Sign Up Page
+-  
 ## Profile
 
 - Users will have a very simple profile where they can add or delete the events they have signed up for.
@@ -186,20 +208,6 @@ The features to be implemented will be a reminder notification to the user's ema
 
 Another feature to be implemented will  be a donation link capable of accepting donations.
 
-- **Responsive design**
-
-(/wireframes/)
-
-- **User-friendly display**
-
-
-
-(/wireframes/.jpg)
-
-- **Dashboard for easy navigation**
-
-
-
 
 
 - **Social media links**
@@ -209,12 +217,20 @@ The site has social media links displayed at the footer of the page, as well as 
 
 - **Functional contact form**
 
+<a></a>
+
 ### Future Features ###
 
 
 ### Considered Features ###
 
 - **Users do not have an option to choose levels or tasks of the game**
+
+[Back to Top](#table-of-contents)
+
+---
+
+<a></a>
 
 ### **Database Structure**
 
@@ -240,7 +256,7 @@ event_date       | String
 event_time       | String
 
 
-
+<a></a>
 
 ## Technologies ##
 
@@ -510,6 +526,11 @@ https://codepen.io/RajRajeshDn/pen/qBEGeEp(cards)
 
 https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog(website template)
 
+Photo by <a href="https://unsplash.com/@rruprrup?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Aleksandra Sapozhnikova</a> on <a href="https://unsplash.com/s/photos/garden-door?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> (door)
+  
+  Photo by <a href="https://unsplash.com/@wizard_s?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Runze Shi</a> on <a href="https://unsplash.com/s/photos/fark-green-backgrounds?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>(vine)
+  
+
 
 ### Colour ###
 
@@ -534,7 +555,7 @@ I would like to recognize the people who have helped me through this project:
 
 - Code Institute
 
-- The Tutors. John, Michale, Sheryl, Scott, and Alan, have all spent countless hours helping me solve the most trivial of issues. Without their support I could have never made it this far so a major shoutout to them. 
+- The Tutors. John, Michael, Sheryl, Scott, and Alan, have all spent countless hours helping me solve the most trivial of issues. Without their support I could have never made it this far so a major shoutout to them. 
 
 
 [Back to content](#contents)
