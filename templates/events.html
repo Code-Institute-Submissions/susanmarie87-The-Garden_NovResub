@@ -1,193 +1,189 @@
 {% extends "base.html" %}
 {% block content %}
 
-
-{% for event in events %}
-{{ event.event_name }}<br>
-{{ event.category_name }}<br>
-{{ event.description }}<br>
-{{ event.date }}<br>
-{% endfor %}
 <section class="banner-5" id="register"></section>
 <div class="spacer">
     &nbsp;
 </div>
 
+<form class="" method="POST" action="{{ url_for('register_events') }}">
+    <div class="wrapper">
+        <div class="cards_wrap">
 
-<div class="wrapper">
-    <div class="cards_wrap">
-        <div class="card_item">
-            <div class="card_inner">
-                <div class="card_top">
-                    <img src="static/img/volunteer.jpg" alt="car" />
-                </div>
-                <div class="card_bottom">
-                    <div class="card_category">
-                        <p>
-                            {{event.event_name}}
-                        </p>
+            {% for event in events %}
+            <div class="card_item">
+                <div class="card_inner">
+                    <div class="card_top">
+                        <img src="{{event.image}}" alt="{{event.event_name}}" />
                     </div>
-                    <div class="card_info">
-                        <p class="title">{{event.description}}</p>
-                        <p>
-                            {{event.date}}
-                        </p>
-                        <button class="button1" name="">Register</button>
-                        <button class="button2" name="">Remove</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card_item">
-            <div class="card_inner">
-                <div class="card_top">
-                    <img src="static/img/storytime.jpg" alt="car" />
-                </div>
-                <div class="card_bottom">
-                    <div class="card_category">
-                        {{event.event_name}}
-                    </div>
-                    <div class="card_info">
-                        <p class="title"></p>
-                        <p>
-                            August 02, 2021
-                        </p>
-                        <button class="button1" name="">Register</button>
-                        <button class="button2" name="">Remove</button>
+                    <div class="card_bottom">
+                        <div class="card_category">
+                            <p>
+                                {{ event.category_name }}
+                            </p>
+                        </div>
+                        <div class="card_info">
+                            <p class="title"> {{ event.event_name }}</p>
+                            <p>
+                                {{ event.event_description }}
+                            </p>
+                            <p>
+                                {{ event.event_date }}
+                            </p>
+                            <button class="button1" name="{{ event._id }}">Register</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="card_item">
-            <div class="card_inner">
-                <div class="card_top">
-                    <img src="static/img/planter-box.jpg" alt="car" />
-                </div>
-                <div class="card_bottom">
-                    <div class="card_category">
+            {% endfor %}
+            <div class="card_item">
+                <div class="card_inner">
+                    <div class="card_top">
+                        <img src="static/img/storytime.jpg" alt="car" />
+                    </div>
+                    <div class="card_bottom">
+                        <div class="card_category">
 
-                        {{event.event_name}}
-                    </div>
-                    <div class="card_info">
-                        <p class="title">Regenerative Farming. What is it?</p>
-                        <p>
-                            August 8, 2021
-                            @ 11:00 A.M.
-                        </p>
-                        <button class="button1" name="">Register</button>
-                        <button class="button2" name="">Remove</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card_item">
-            <div class="card_inner">
-                <div class="card_top">
-                    <img src="static/img/water.jpg" alt="car" />
-                </div>
-                <div class="card_bottom">
-                    <div class="card_category">
-                    </div>
-                    <div class="card_info">
-                        <p class="title">Save ALL the water with us</p>
-                        <p>
-                            August 11, 2021
-                            @ 11:00 P.M.
-                        </p>
-                        <button class="button1" name="">Register</button>
-                        <button class="button2" name="">Remove</button>
+                        </div>
+                        <div class="card_info">
+                            <p class="title"></p>
+                            <p>
+                                August 02, 2021
+                            </p>
+                            <button class="button1" name="">Register</button>
+                            <button class="button2" name="">Remove</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="card_item">
-            <div class="card_inner">
-                <div class="card_top">
-                    <img src="static/img/garden-party.jpg" alt="car" />
-                </div>
-                <div class="card_bottom">
-                    <div class="card_category">
-                        Garden Party
+            <div class="card_item">
+                <div class="card_inner">
+                    <div class="card_top">
+                        <img src="static/img/planter-box.jpg" alt="car" />
                     </div>
-                    <div class="card_info">
-                        <p class="title">Dance Party in the Garden</p>
-                        <p>
-                            August 13, 2021
-                            @ 3:00 P.M.
-                        </p>
-                        <button class="button1" name="">Register</button>
-                        <button class="button2" name="">Remove</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card_item">
-            <div class="card_inner">
-                <div class="card_top">
-                    <img src="static/img/cooking.jpg" alt="car" />
-                </div>
-                <div class="card_bottom">
-                    <div class="card_category">
-                        Cooking With The Kids
-                    </div>
-                    <div class="card_info">
-                        <p class="title">Learn To Cook With The Kids</p>
-                        <p>
-                            August 14, 2021
-                            @ 11:00
-                        </p>
-                        <button class="button1" name="">Register</button>
-                        <button class="button2" name="">Remove</button>
+                    <div class="card_bottom">
+                        <div class="card_category">
+
+                        </div>
+                        <div class="card_info">
+                            <p class="title">Regenerative Farming. What is it?</p>
+                            <p>
+                                August 8, 2021
+                                @ 11:00 A.M.
+                            </p>
+                            <button class="button1" name="">Register</button>
+                            <button class="button2" name="">Remove</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="card_item">
-            <div class="card_inner">
-                <div class="card_top">
-                    <img src="static/img/tomatoes.jpg" alt="car" />
-                </div>
-                <div class="card_bottom">
-                    <div class="card_category">
-                        Best Growing Practices
+            <div class="card_item">
+                <div class="card_inner">
+                    <div class="card_top">
+                        <img src="static/img/water.jpg" alt="car" />
                     </div>
-                    <div class="card_info">
-                        <p class="title">Planting Tips and Tricks</p>
-                        <p>
-                            August 16, 2021
-                            @ 11:00
-                        </p>
-                        <button class="button1" name="">Register</button>
-                        <button class="button2" name="">Remove</button>
+                    <div class="card_bottom">
+                        <div class="card_category">
+                        </div>
+                        <div class="card_info">
+                            <p class="title">Save ALL the water with us</p>
+                            <p>
+                                August 11, 2021
+                                @ 11:00 P.M.
+                            </p>
+                            <button class="button1" name="">Register</button>
+                            <button class="button2" name="">Remove</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="card_item">
-            <div class="card_inner">
-                <div class="card_top">
-                    <img src="static/img/yoga.jpg" alt="car" />
-                </div>
-                <div class="card_bottom">
-                    <div class="card_category">
-                        Yoga At The Garden
+            <div class="card_item">
+                <div class="card_inner">
+                    <div class="card_top">
+                        <img src="static/img/garden-party.jpg" alt="car" />
                     </div>
-                    <div class="card_info">
-                        <p class="title">Balance Mind, Body, and Soul</p>
-                        <p>
-                            August 17, 2021
-                            @9:00 A.M.
-                        </p>
-                        <button class="button1" name="">Register</button>
-                        <button class="button2" name="">Remove</button>
+                    <div class="card_bottom">
+                        <div class="card_category">
+                            Garden Party
+                        </div>
+                        <div class="card_info">
+                            <p class="title">Dance Party in the Garden</p>
+                            <p>
+                                August 13, 2021
+                                @ 3:00 P.M.
+                            </p>
+                            <button class="button1" name="">Register</button>
+                            <button class="button2" name="">Remove</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card_item">
+                <div class="card_inner">
+                    <div class="card_top">
+                        <img src="static/img/cooking.jpg" alt="car" />
+                    </div>
+                    <div class="card_bottom">
+                        <div class="card_category">
+                            Cooking With The Kids
+                        </div>
+                        <div class="card_info">
+                            <p class="title">Learn To Cook With The Kids</p>
+                            <p>
+                                August 14, 2021
+                                @ 11:00
+                            </p>
+                            <button class="button1" name="">Register</button>
+                            <button class="button2" name="">Remove</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card_item">
+                <div class="card_inner">
+                    <div class="card_top">
+                        <img src="static/img/tomatoes.jpg" alt="" />
+                    </div>
+                    <div class="card_bottom">
+                        <div class="card_category">
+                            Best Growing Practices
+                        </div>
+                        <div class="card_info">
+                            <p class="title">Planting Tips and Tricks</p>
+                            <p>
+                                August 16, 2021
+                                @ 11:00
+                            </p>
+                            <button class="button1" name="">Register</button>
+                            <button class="button2" name="">Remove</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card_item">
+                <div class="card_inner">
+                    <div class="card_top">
+                        <img src="static/img/yoga.jpg" alt="car" />
+                    </div>
+                    <div class="card_bottom">
+                        <div class="card_category">
+                            Yoga At The Garden
+                        </div>
+                        <div class="card_info">
+                            <p class="title">Balance Mind, Body, and Soul</p>
+                            <p>
+                                August 17, 2021
+                                @9:00 A.M.
+                            </p>
+                            <button class="button1" name="">Register</button>
+                            <button class="button2" name="">Remove</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-
+</form>
 
 
 {% endblock %}
