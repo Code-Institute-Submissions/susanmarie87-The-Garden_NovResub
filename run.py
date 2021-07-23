@@ -27,9 +27,8 @@ def index():
 @app.route("/events")
 def events():
     events = list(mongo.db.events.find())
-    for event in events:
-        print(event)
-    return render_template("events.html", event=events)
+        
+    return render_template("events.html", events=events)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -106,26 +105,27 @@ def logout():
     return redirect(url_for("login"))
 
 """
-@app.route("/add_event", methods=["GET", "POST"])
-def add_task)():
+@app.route("/add_events", methods=["GET", "POST"])
+def add_events():
     if request.method == "POST":
         "event"
+"""
 
-
-@app.route("/add_event")
-def add_event():
+@app.route("/register_events" methods=["GET", "POST"]) 
+def register_events(): 
+    """
     if request.method == "POST":
         mongo.db.events.insert_one(request.form.to_dict())
     events= mongo.db.events.find().sort("event_name", 1)
-    return render_template("add_event.html", events=events)
-"""
- 
+    return render_template("register_event.html", events=events)
+    """
+    print(request.form.to.dict())
+
 
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
     
-
 
 """""
  @app.errorhandler(404)
