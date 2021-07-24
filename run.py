@@ -40,11 +40,11 @@ def register():
 
         if existing_user:
             flash("Username already exists")
-            return redirect(url_for("register"))
+            return redirect(url_for("profile"))
 
         register = {
             "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password"))
+            "password": generate_password_hash(request.form.get("password"), 'sha256')
         }
         mongo.db.users.insert_one(register)
 
@@ -53,7 +53,7 @@ def register():
         flash("Registration Successful!")
         return redirect(url_for("profile", username=session["user"]))
 
-    return render_template("register.html")
+    return render_template("login.html")
 
 
 @app.route("/unregister_event", methods=["POST"])
