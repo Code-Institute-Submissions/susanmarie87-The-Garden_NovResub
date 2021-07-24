@@ -199,7 +199,8 @@ def add_events():
 
 @app.route("/register_events", methods=["GET", "POST"]) 
 def register_events(): 
-
+    if not session.get("user", None): 
+        return redirect(url_for("login"))
     if request.method == "POST":
         registration = {
             "username": session["user"],                                                                        
@@ -218,19 +219,17 @@ def contact():
     return render_template("contact.html")
     
 
-"""""
- @app.errorhandler(404)
- def page_not_found(e):
-     404 error brings user to error page
 
-     return render_template('pages/404.html'), 404
+@app.errorhandler(404)
+def page_not_found(e):
 
-# @app.errohandler(500)
-# def internal_error(err):
-    # 500 error brings user to error page
+    return render_template('404.html'), 404
 
-    # return render_template('pages/500.html'), 500
-"""    
+@app.errorhandler(500)
+def internal_error(err):
+
+    return render_template('500.html'), 500
+  
 
 
 if __name__ == "__main__":
