@@ -68,6 +68,18 @@ def unregister_event():
     return redirect(url_for("profile", username=session ["user"]))
 
 
+@app.route("/delete_event", methods=["POST"])
+def delete_event():
+    if request.method == "POST":
+        event = {
+            "username": session["user"],                                                                        
+            "_id": ObjectId(request.form.get("delete_event"))
+        }
+        mongo.db.events.delete_one(event)
+        flash("You have deleted this event!")
+    return redirect(url_for("profile", username=session ["user"]))
+
+
 @app.route("/create_event", methods=["POST"])
 def create_event():
     
@@ -129,9 +141,11 @@ def profile(username):
         events = list(mongo.db.events.find(
             {"_id": {"$in": registrations}}))
         my_events = list(mongo.db.events.find(
-            {"username": session["user"]})
-            
-        return render_template("profile.html", username=username, events=events)
+            {"username": session["user"]}))
+
+        return render_template(
+            "profile.html", username=username, events=events,
+             my_events=my_events)
 
     return redirect(url_for("login"))
 
