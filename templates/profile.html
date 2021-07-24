@@ -1,32 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% for event in event %}
-{{ event.event_name }}<br>
-{{ event.category_name }}<br>
-{{ event.description }}<br>
-{{ event.date }}<br>
-{% endfor %}
-
 <form class="" method="POST" action="{{ url_for('create_event') }}">
     <div class="wrapper">
         <div class="cards_wrap">
             <div class="card_item">
                 <div class="card_inner">
                     <div class="card_top">
-                        <img src="" alt="new_event_image" />
+                        <img src="/static/img/water-boy.jpg" alt="new_event_image" />
+                        <input type="text" name="image" value="static/img/water-boy.jpg">
                     </div>
                     <div class="card_bottom">
                         <div class="card_category">
                             <p>
-                                <input type="text" name="catgory_name" placeholder="Name of your event">
+                                <input type="text" name="category_name" placeholder="Category of event">
                             </p>
                         </div>
                         <div class="card_info">
-                            <p class="title"><input type="text" name="event_name" placeholder="event name"></p>
-                            <input type="text" name="event_description" placeholder="print description of your event">
-                            <p>
-                                <input type="text" name="event_description" placeholder="Describe your event">
+                            <p class="title"><input type="text" name="event_name" placeholder="Event Name"></p>
                             </p>
                             <p>
                                 <input type="text" name="event_date" placeholder="event date">
@@ -76,6 +67,42 @@
         </div>
 </form>
 
+<h3>Here are your own custom garden events {{username}}</h3>
+<form class="" method="POST" action="{{ url_for('unregister_event') }}">
+    <div class="wrapper">
+        <div class="cards_wrap">
 
+            {% for event in my_events %}
+            <div class="card_item">
+                <div class="card_inner">
+                    <div class="card_top">
+                        <img src="../{{event.image}}" alt="{{event.event_name}}" />
+                    </div>
+                    <div class="card_bottom">
+                        <div class="card_category">
+                            <p>
+                                {{ event.category_name }}
+                            </p>
+                        </div>
+                        <div class="card_info">
+                            <p class="title"> {{ event.event_name }}</p>
+                            <p>
+                                {{ event.event_description }}
+                            </p>
+                            <p>
+                                {{ event.event_date }}
+                            </p>
+                            <button class="button1" value="{{ event._id }}" name="edit_event" type="submit">Custom
+                                Event</button>
+                            <button class="button1" value="{{ event._id }}" name="delete_event" type="submit">Delete
+                                Event</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
+</form>
 
 {% endblock %}
