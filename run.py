@@ -190,12 +190,6 @@ def logout():
     session.pop("user")
     return redirect(url_for("login"))
 
-"""
-@app.route("/add_events", methods=["GET", "POST"])
-def add_events():
-    if request.method == "POST":
-        "event"
-"""
 
 @app.route("/register_events", methods=["GET", "POST"]) 
 def register_events(): 
@@ -218,8 +212,7 @@ def contact():
            request.form.get("name")))
     return render_template("contact.html")
     
-
-
+    
 @app.errorhandler(404)
 def page_not_found(e):
 
@@ -235,6 +228,5 @@ def internal_error(err):
 if __name__ == "__main__":
     app.run(
         host=os.environ.get("IP", "0.0.0.0"),
-        port=int(os.environ.get("PORT", "5000")),
-        debug=True) 
+        port=int(os.environ.get("PORT", "5000")),) 
         
