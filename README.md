@@ -124,7 +124,7 @@ This color went beautifully on the site. It nicely breaks up the black and white
 
 View original wireframes here:
 
-[Wireframes](static/wireframes/g-garden.pdf)
+[embed]http://example.com/file.pdf[/embed]
 ---
 
 <a></a>
@@ -292,54 +292,44 @@ event_time       | String
 ### UI
 
 1. Navigation
-    - Hovering over each link has the desired response from the nav bar
-    - Home takes the user to the *Home* page as expected
-    - Create a character takes the user to the *Create* page as expected
-    - Party takes the user to the *Party* page as expected
-    - Account takes the user to the *Account* page as expected
-    - Sign Out logs the user out of their session returning them to *Home*
-    - When not logged a user trying to access a page for logged in users returns custom 500 error page
-    - When user tries to access an unavailable address a custom 404 message is displayed
-
+    - 
 2. Footer
-    - Each text element displays as expected in the correct position
-    - The icons link to their respective profile pages (Facebook, Github, Instagram)
-    - Footer displays in the correct location on each page of the site
-    - Link for Github works as expected redirecting to the correct site
-    - Other links are inactive and don't leave the site as expected
+    - 
 
-3. Loading Spinner
-    - The loading spinner displays when loading additional information from the external API as displays correctly until all information is loaded
-    - Animation is as expected without stutter or 'hiccup'
+3. 
+    -
 
 ### Functionality 
 
 1. Add An Event
     - The user should be able to add a desired event.
     - This can be completed by a register button on the form link.
-    - 
-    - Username is a required field and the custom alert functions flags as expected.
+    - The button sends the event data to the profile.
+    - The event is then stored on the person's profile.
 
-2. Party
-    - 
+2. Register
+    - The user must register in order to add an event.
+    - The registraion works.
+    - Werkzeug password security is implemented properly.
+    - The user will garner an error message if incorrect pattern are entered.
 
-3. Edit
-    - 
+3. Login/log out
+    - The login function works as expected.
+    - The user must provide their proper username and password.
+    - Error message will flash if it the information is incorrect.
+    - The user is then prompted to their profile.
 
-4. Register
-    - 
-5. Login/log out
-    - 
+4. Delete
 
 ### Responsive Design
 
 1. Mobile
     - All pages tested on Android and current iOS platforms and returns as expected.
-    - 
+    - Poor response on Galaxy Fold (See unresolved issues.)
     - 
 
 2. Tablet
-    - 
+    - All pages display properly across tablet screens. 
 
 3. Desktop
     - Tested with Safari & Chrome
@@ -350,17 +340,28 @@ event_time       | String
 
 ### Issues and resolutions
 ---
+* Problem: The mobile-first side nav links are not dislplaying. The error is "toggle is not defined"
+* Cause: 
+* Resolution: 
+---
+---
 * Problem: 
 * Cause: 
 * Resolution: 
 ---
-* 
 ---
-
-
+* Problem: 
+* Cause: 
+* Resolution: 
+---
+---
+* Problem: 
+* Cause: 
+* Resolution: 
+---
 ### Unresolved Issues
 ---
-* 
+* Poor breakdown response on Galaxy Fold.
 * 
 * 
 ---
@@ -369,7 +370,7 @@ event_time       | String
 
 ### Local Deployment
 
-I have created the Dog Health Tracker project using Github, from there I used [Gitpod](https://gitpod.io/) to write my code. 
+I have created The-Garden project using Github, from there I used [Gitpod](https://gitpod.io/) to write my code. 
 Then I used commits to git followed by "git push" to my GitHub repository. 
 I've deployed this project to Heroku and used "git push heroku master" to make sure my pushes to GitHub were also made to Heroku. 
 
@@ -467,36 +468,49 @@ To clone the project:
 
 ### Images ###
 
+
+
+[Cooking Class photo by: Gareth Hubbard](https://unsplash.com/photos/qPcSUERqBAc)
+
+[Dance Party photo by: Ben Rosett](https://unsplash.com/photos/nYugmV-SY6s)
+
+[Future Leader Kiana Bosman](https://unsplash.com/photos/0pB01U2NDCQ)
+
+[Hero Image](https://phys.org/news/2018-09-kids-food-gardening.html)
+
+[Water Conservation photo by: Johnathan Kemper](https://unsplash.com/photos/xvVAkT3I-84)
+
+[Little girl with plants by: Jonathan Borba](https://unsplash.com/@jonathanborba)
+
+[Planter-Box](https://www.hercampus.com/school/u-mass-amherst/growing-garden-kitchen-scraps/)
+
+[Smiling boy with book by: Ben White](https://unsplash.com/photos/4K2lIP0zc_k)
+
+[Elaine Casa](https://unsplash.com/photos/qgHGDbbSNm8)
+
+[Water-boy photo by: Filip Urban](https://unsplash.com/photos/ffJ8Qa0VQU0)
+
+[Volunteer by: Anna Earl](https://unsplash.com/photos/J-Jb1niw1j0)
+
+[Yoga Gnome by: Dorota Dylka](https://unsplash.com/photos/Y6nFvt1ebyw)
+
+[Photo by:Aleksandra Sapozhnikova](https://unsplash.com/photos/N3DbwlJZpRU)
+
+[Photo by:Aleksandra Sapozhnikova]("https://unsplash.com/@rruprrup?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText") 
+
+  
+[Photo by:Runze Shi]("https://unsplash.com/@wizard_s?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText")
+
+
+
 Photo by Artem Beliaikin from Pexels (apple trees)
 
-Photo by Kiana Bosman on Unsplash(future leader)
-
-Photo by Karl Fredrickson on Unsplash(cherry trees)
-
-Photo by Jonathan Borba on Unsplash(ambitious girl)
-
-Hero Image- https://phys.org/news/2018-09-kids-food-gardening.html 
+Photo by Artem Beliaikin from Pexels (apple trees)
+  
 
 paige-cody-z8gKIE4Kz0Y-unsplash (3) (little boy carrying bucket)
 
 samantha-gades-fIHozNWfcvs-unsplash (1) (outdoor party redhat)
-
-ben-white-4K2lIP0zc_k-unsplash (Smiling boy with book)
-
-Photo by Anna Earl on Unsplash(volunteer)
-
-Photo by Dorota Dylka on Unsplash(yoga)
-
-https://codepen.io/RajRajeshDn/pen/qBEGeEp(cards)
-
-https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog(website template)
-
-Photo by <a href="https://unsplash.com/@rruprrup?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Aleksandra Sapozhnikova</a> on <a href="https://unsplash.com/s/photos/garden-door?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> (door)
-  
-  Photo by <a href="https://unsplash.com/@wizard_s?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Runze Shi</a> on <a href="https://unsplash.com/s/photos/fark-green-backgrounds?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>(vine)
-  
-
-
 ### Colour ###
 
 
@@ -506,6 +520,14 @@ Photo by <a href="https://unsplash.com/@rruprrup?utm_source=unsplash&utm_medium=
 
 ### Code ideas ###
 
+Website template adapted from:
+
+[Website Template](https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog)
+
+--
+Cards for events adapted from:
+
+[Event Card](https://codepen.io/RajRajeshDn/pen/qBEGeEp(cards))
 - 
 
 [Back to content](#contents)
@@ -516,11 +538,25 @@ Photo by <a href="https://unsplash.com/@rruprrup?utm_source=unsplash&utm_medium=
 
 I would like to recognize the people who have helped me through this project:
 
-- My mentor [Simen Daehlin](https://github.com/Eventyret) 
+- [Simen Daehlin](https://github.com/Eventyret) 
 
-- Code Institute
+- [Richard Wells](https://github.com/D0nni387)
 
-- The Tutors. John, Michael, Sheryl, Scott, and Alan, have all spent countless hours helping me solve the most trivial of issues. Without their support I could have never made it this far so a major shoutout to them. 
+- [Jonathan Knepher](https://github.com/jknepher)
+
+## The Tutors ## 
+   - John
+   - Sheryl
+   - Michael
+   - Scott
+   - Alan
+ 
+  They have all spent countless hours helping me solve the most trivial of issues. 
+Without their support I could have never made it this far so a major shoutout to them. 
+
+- [Alan McGee](https://codeinstitute.com)
+
+- [Code Institute](https://codeinstitute.com)
 
 
 [Back to content](#contents)
