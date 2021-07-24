@@ -34,7 +34,7 @@
             {% if session.user%}
             <li><a class="nav-link" href="{{ url_for('profile', username=session['user']) }}"
                     onclick="toggle()">Profile</a></li>
-            --> <li><a class="nav-link" href="{{ url_for('register_events') }}" onclick="toggle()">Register Event</a>
+            <li><a class="nav-link" href="{{ url_for('register_events') }}" onclick="toggle()">Register Event</a>
             </li>
             <li><a class="nav-link" href="{{ url_for('logout') }}" onclick="toggle()">Logout</a></li>
             {% else %}
@@ -78,9 +78,9 @@
             </div>
             <div class="sci">
                 <ul>
-                    <li><a href="https://www.facebook.com"><img src="static/img/facebook.png"></a></li>
-                    <li><a href="https://www.twitter.com"><img src="static/img/twitter.png"></a></li>
-                    <li><a href="https://www.instagram.com"><img src="static/img/linkedin.png"></a></li>
+                    <li><a href="https://www.facebook.com"><img src="/static/img/facebook.png"></a></li>
+                    <li><a href="https://www.twitter.com"><img src="/static/img/twitter.png"></a></li>
+                    <li><a href="https://www.instagram.com"><img src="/static/img/linkedin.png"></a></li>
                 </ul>
             </div>
             <p class="copyright">Gabe's Garden | Copyright © 2021</p>
