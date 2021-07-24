@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form class="" method="POST" action="{{ url_for('edit_event') }}">
+    <div class="wrapper">
+        <div class="cards_wrap">
+            <div class="card_item">
+                <div class="card_inner">
+                    <div class="card_top">
+                        <img src="../{{event.image}}" alt="new_event_image" />
+                        <input type="text" name="image" value="{{event.image}}">
+                    </div>
+                    <div class="card_bottom">
+                        <div class="card_category">
+                            <p>
+                                <input type="text" name="category_name" value="{{event.category_name}}">
+                            </p>
+                        </div>
+                        <div class="card_info">
+                            <p class="title"><input type="text" name="event_name" value="{{event.event_name}}"></p>
+                            </p>
+                            <p>
+                                <input type="text" name="event_date" value="{{event.event_date}}">
+                            </p>
+                            <button class="button1" value="{{ event._id }}" name="commit_edit_event"
+                                formaction="{{url_for("edit_event")}}" type="submit">Edit
+                                Event</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+{% endblock %}
