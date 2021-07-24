@@ -91,10 +91,22 @@ def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
-    if session["user"]:  
-        return render_template("profile.html", username=username)
+    if session["user"]:
+        registrations = list(mongo.db.registration.find(
+            {"username": session["user"]}, 
+            {"event_id": 1}).distinct("event_id"))
+        registrations = [ObjectId(event_id) for event_id in registrations]
+        print(registrations)
+        events = list(mongo.db.events.find(
+            {"_id": {"$in": registrations}}))
+        return render_template("profile.html", username=username, events=events)
 
     return redirect(url_for("login"))
+
+
+@app.route("/unregister_event", methods=["POST"])
+def unregister_event():
+    pass
 
 
 @app.route("/logout")
@@ -126,6 +138,9 @@ def register_events():
 
 @app.route("/contact")
 def contact():
+    if request.method == "POST":
+       flash("Thank you for contacting us, {}".format(
+           request.form.get("name")))
     return render_template("contact.html")
     
 
