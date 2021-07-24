@@ -56,13 +56,43 @@ def register():
     return render_template("register.html")
 
 
+@app.route("/unregister_event", methods=["POST"])
+def unregister_event():
+    if request.method == "POST":
+        registration = {
+            "username": session["user"],                                                                        
+            "event_id": request.form.get("event_id")
+        }
+        mongo.db.registration.delete_many(registration)
+        flash("You're successfully unregistered!")
+    return redirect(url_for("profile", username=session ["user"]))
+
+
+@app.route("/create_event", methods=["POST"])
+def create_event():
+    
+    if request.method == "POST":
+        event = {
+            "username": session["user"],                                                                        
+
+            "category_name": request.form.get("category_name"),
+            "event_name": request.form.get("event_name"),
+            "event_date": request.form.get("event_date"),
+            "image": request.form.get("image")
+
+        }
+        mongo.db.events.insert_one(event)
+        flash("You have Created a New Event!")
+    return redirect(url_for("events"))
+
+
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
         # check for existing username
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username")})
-        print(existing_user)
         if existing_user:
             # ensure hashed password matches user input
             if check_password_hash(
@@ -96,17 +126,14 @@ def profile(username):
             {"username": session["user"]}, 
             {"event_id": 1}).distinct("event_id"))
         registrations = [ObjectId(event_id) for event_id in registrations]
-        print(registrations)
         events = list(mongo.db.events.find(
             {"_id": {"$in": registrations}}))
+        my_events = list(mongo.db.events.find(
+            {"username": session["user"]})
+            
         return render_template("profile.html", username=username, events=events)
 
     return redirect(url_for("login"))
-
-
-@app.route("/unregister_event", methods=["POST"])
-def unregister_event():
-    pass
 
 
 @app.route("/logout")
@@ -132,7 +159,7 @@ def register_events():
             "event_id": request.form.get("event_id")
         }
         mongo.db.registration.insert_one(registration)
-    flash("You're successfully registered!")
+        flash("You're successfully registered!")
     return redirect(url_for("profile", username=session ["user"]))
 
 
