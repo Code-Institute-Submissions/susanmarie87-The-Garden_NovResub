@@ -560,7 +560,7 @@ p {
 }
 
 /*Profile*/
-.banner-3 {
+/*.banner-3 {
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -574,7 +574,7 @@ p {
 
 
 /*Register and Login Form*/
-section {
+/*.banner-1 {
     position: relative;
     background: url('../img/backgroud.jpg');
     display: flex;
@@ -582,7 +582,7 @@ section {
     justify-content: center;
     align-items: center;
     transition: 0.5s;
-}
+}*/
 
 section .container {
     position: relative;
@@ -912,4 +912,44 @@ img {
     transform: translateY(-50%);
     text-align: center;
     color: #343434;
+}
+
+/*Profile PAGE*/
+
+.container-fluid {
+
+    background: url('../img/backgroud.jpg');
+}
+
+.profile {
+    padding: 1rem;
+    padding-top: 15rem;
+    margin-bottom: 15rem;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/*Login PAGE*/
+.container-login {
+    background: url('../img/backgroud.jpg');
+    padding: 1rem;
+    padding-top: 15rem;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/*Error PAGE*/
+
+error-page {
+    position: absolute;
+    top: 10%;
+    left: 17%;
+    right: 17%;
+    bottom: 20% display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
