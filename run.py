@@ -98,6 +98,39 @@ def create_event():
     return redirect(url_for("events"))
 
 
+@app.route ("/open_edit_event", methods=["POST"])
+def open_edit_event():
+    if request.method == "POST":
+        event_filter = {
+            "username": session["user"],                                                                        
+            "_id": ObjectId(request.form.get("open_edit_event"))
+        }
+
+        event = mongo.db.events.find_one(event_filter)
+
+        return render_template(
+            "edit_event.html", event=event)
+
+
+@app.route("/edit_event", methods=["POST"])
+def edit_event():
+    if request.method == "POST":
+        event = {
+            "username": session["user"],                                                                        
+            "_id": ObjectId(request.form.get("commit_edit_event")),
+            "category_name": request.form.get("category_name"),
+            "event_name": request.form.get("event_name"),
+            "event_date": request.form.get("event_date"),
+            "image": request.form.get("image")
+        }
+
+        event_filter = {
+            "username": session["user"],                                                                        
+            "_id": ObjectId(request.form.get("commit_edit_event"))
+        }
+        mongo.db.events.replace_one(event_filter, event)
+        flash("You have edited your event!")
+    return redirect(url_for("profile", username=session["user"]))
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
