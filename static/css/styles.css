@@ -955,3 +955,14 @@ img {
     line-height: 1em;
 
 }
+
+.banner-4 {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url('../img/garden-kids.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
