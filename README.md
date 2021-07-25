@@ -301,13 +301,28 @@ event_time       | String
 ### UI
 
 1. Navigation
-    - 
-2. Footer
-    - 
+    - The navigation works as it's supposed to across all screens. In full width, the navbar displays links across the top of the page.
+    When the app is open on smaller screens it displays properly as a hamburger with the toggle function to drop the navlinks.
+    - The navbar displays properly across all browsers at each break point. The links all work properly as well. 
 
-3. 
-    -
+2. Contact Form
+    - The contact form displays correct on all pages except for the profile page.
+    - The contact form lets the user send a message over to the organization on all browsers.
+    - The contact form links display properly across all browsers.
 
+3.  Login and Registration Form
+    - The login ad registration form do not display properly when ran through all of the browsers. The input boxes on the lgin form beome rather large  and look out of place but I have run out time to fix that.
+
+    - The forms do  function properly across all browsers. When a user registers, they are prompted back to the login page. Once logged in, they will  be prompted to their profile page
+
+4. Events 
+   - The events display properly across all browsers. 
+   - The user is able to register for the event, which then displays on their profile page.
+
+5. Create Event
+   - The user is able to successfully create an event across all browsers. The event then displays on the events page.
+
+   - The create event function is easy to edit and also delete.
 ### Functionality 
 
 1. Add An Event
@@ -380,8 +395,11 @@ event_time       | String
 ### Unresolved Issues
 ---
 * Poor breakdown response on Galaxy Fold.
-* 
-* 
+
+* I was unable to get the flash messages functioning as I ran out of time. Lacking user interaction
+  reflects poorly on the app and is quite an issue. This problem will need to be resolved in the future.
+  
+* Create event card, I cannot implement jinja templating as it is a custom event. I cannot remove the value either. The value of the image then stays on the card. I ran out of time and brainspace to fix this error as well.
 ---
 
 ## **Deployment**
