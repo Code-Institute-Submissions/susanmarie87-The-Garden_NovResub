@@ -1,49 +1,50 @@
 {% extends "base.html" %}
 {% block content %}
+<section class="banner-4" id="register"></section>
+<h2>Come Play At The Garden!</h2>
+<div class="spacer">
+    &nbsp;
+</div>
 
-
-<div class="container-profile">
-    <form class="" method="POST" action="{{ url_for('create_event') }}">
-        <div class="row">
-            <div class="col s12 m7">
-                <div class="profile-card">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="/static/img/water-boy.jpg" alt="new_event_image" />
-                            <input type="text" name="image" value="static/img/water-boy.jpg">
+<h1>Create a new event</h1>
+<form class="" method="POST" action="{{ url_for('create_event') }}">
+    <div class="wrapper">
+        <div class="cards_wrap">
+            <div class="card_item">
+                <div class="card_inner">
+                    <div class="card_top">
+                        <img src="/static/img/water-boy.jpg" alt="new_event_image" />
+                        <input type="text" name="image" value="static/img/water-boy.jpg">
+                    </div>
+                    <div class="card_bottom">
+                        <div class="card_category">
+                            <p>
+                                <input type="text" name="category_name" placeholder="Category of event">
+                            </p>
                         </div>
-                        <div class="card_bottom">
-                            <div class="card_category">
-                                <p>
-                                    <input type="text" name="category_name" placeholder="Category of event">
-                                </p>
-                            </div>
-                            <div class="card_info">
-                                <p class="title"><input type="text" name="event_name" placeholder="Event Name"></p>
-                                </p>
-                                <p>
-                                    <input type="text" name="event_date" placeholder="event date">
-                                </p>
-                                <button class="button1" value="new event" name="new event"
-                                    type="submit">Create!</button>
-                            </div>
+                        <div class="card_info">
+                            <p class="title"><input type="text" name="event_name" placeholder="Event Name"></p>
+                            </p>
+                            <p>
+                                <input type="text" name="event_date" placeholder="event date">
+                            </p>
+                            <button class="button1" value="new event" name="new event">Create Event!</button>
                         </div>
                     </div>
                 </div>
             </div>
-    </form>
-
-
-    <!--<h5 class="registered-flash">You're registered for the following events: {{username}}</h5>-->
-    <form class="" method="POST" action="{{ url_for('unregister_event') }}">
-
-
-        {% for event in events %}
-        <div class="row">
-            <div class="col s12 m7">
-                <div class="card-2">
-                    <div class="card-image">
-                        <img src="../{{event.image}}" alt="{{event.event_name}}" />
+        </div>
+    </div>
+</form>
+<h1> Your events</h1>
+<form class="" method="POST" action="{{ url_for('unregister_event') }}">
+    <div class="wrapper">
+        <div class="cards_wrap">
+            {% for event in events %}
+            <div class="card_item">
+                <div class="card_inner">
+                    <div class="card_top">
+                        <img src="{{event.image}}" alt="{{event.event_name}}" />
                     </div>
                     <div class="card_bottom">
                         <div class="card_category">
@@ -65,56 +66,46 @@
                     </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
-
-        {% endfor %}
-</div>
-</div>
+    </div>
 </form>
-
-<!--<h3>Here are your own custom garden events {{username}}</h3>-->
+<h1> Your Custom Events!</h1>
 <form class="" method="POST">
-    <div class="row">
-        <div class="col s12 m7">
-            <div class="card">
-                {% for event in my_events %}
-                <div class="card_item">
-                    <div class="card_inner">
-                        <div class="card_top">
-                            <img src="../{{event.image}}" alt="{{event.event_name}}" />
+    <div class="wrapper">
+        <div class="cards_wrap">
+            {% for event in my_events %}
+            <div class="card_item">
+                <div class="card_inner">
+                    <div class="card_top">
+                        <img src="{{event.image}}" alt="{{event.event_name}}" />
+                    </div>
+                    <div class="card_bottom">
+                        <div class="card_category">
+                            <p>
+                                {{ event.category_name }}
+                            </p>
                         </div>
-                        <div class="card_bottom">
-                            <div class="card_category">
-                                <p>
-                                    {{ event.category_name }}
-                                </p>
-                            </div>
-                            <div class="card_info">
-                                <p class="title"> {{ event.event_name }}</p>
-                                <p>
-                                    {{ event.event_description }}
-                                </p>
-                                <p>
-                                    {{ event.event_date }}
-                                </p>
-                                <button class="button1" value="{{ event._id }}" name="open_edit_event"
-                                    formaction="{{url_for("open_edit_event")}}" type="submit">Edit
-                                    Event</button>
-                                <button class="button1" value="{{ event._id }}" name="delete_event"
-                                    formaction="{{url_for("delete_event")}}" type="submit">Delete
-                                    Event</button>
-                            </div>
+                        <div class="card_info">
+                            <p class="title"> {{ event.event_name }}</p>
+                            <p>
+                                {{ event.event_description }}
+                            </p>
+                            <p>
+                                {{ event.event_date }}
+                            </p>
+                            <button class="button1" value="{{ event._id }}" name="open_edit_event"
+                                formaction="{{url_for("open_edit_event")}}" type="submit">Edit
+                                Event</button>
+                            <button class="button1" value="{{ event._id }}" name="delete_event"
+                                formaction="{{url_for("delete_event")}}" type="submit">Delete
+                                Event</button>
                         </div>
                     </div>
                 </div>
-
-                {% endfor %}
             </div>
+            {% endfor %}
         </div>
     </div>
-    </div>
 </form>
-
-
-
 {% endblock %}
