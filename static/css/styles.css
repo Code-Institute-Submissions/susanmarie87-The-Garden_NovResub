@@ -744,8 +744,8 @@ section .container.active .signinBx .imgBx {
 /* Buttons On Event Cards*/
 
 .button1 {
-    border: black;
-    color: white;
+    border: rgb(20, 20, 20);
+    color: rgb(255, 255, 255);
     padding: 10px 15px;
     text-align: left;
     text-decoration: none;
@@ -757,15 +757,15 @@ section .container.active .signinBx .imgBx {
 }
 
 .button1 {
-    background-color: cadetblue color;
+    background-color: rgb(95, 158, 160);
     color: black;
-    border: 2px solid cadetblue;
+    border: 2px solid rgb(101, 171, 173);
 }
 
 
 .button2 {
-    border: black;
-    color: white;
+    border: rgb(19, 18, 18);
+    color: #fff;
     padding: 10px 15px;
     text-align: left;
     text-decoration: none;
@@ -777,9 +777,9 @@ section .container.active .signinBx .imgBx {
 }
 
 .button2 {
-    background-color: cadetblue color;
+    background-color: rgb(95, 158, 160) color;
     color: black;
-    border: 2px solid cadetblue;
+    border: 2px solid rgb(95, 158, 160);
 }
 
 
@@ -912,7 +912,7 @@ img {
     margin-bottom: 15rem;
     justify-content: center;
     align-items: center;
-
+    margin-bottom: 15rem;
 }
 
 /*Login PAGE*/
@@ -925,7 +925,33 @@ img {
 
 }
 
-.row {
+.error-container {
+    background-color: aquamarine;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    padding-top: 15rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h3 {
+    color: #fff;
+    font-size: 90px;
+    font-family: 'Big Shoulder Stencil Text', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1em;
+
+}
+
+.banner-6 h2 {
+    color: #fff;
+    font-size: 90px;
+    font-family: 'Big Shoulder Stencil Text', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1em;
+
 }
