@@ -11,6 +11,8 @@ if os.path.exists("env.py"):
 
 
 app = Flask(__name__)
+app.secret_key = os.environ.get("SECRET_KEY")
+
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
@@ -27,7 +29,6 @@ def index():
 @app.route("/events")
 def events():
     events = list(mongo.db.events.find())
-        
     return render_template("events.html", events=events)
 
 
@@ -40,13 +41,12 @@ def register():
 
         if existing_user:
             flash("Username already exists")
-            
             return render_template("login.html")
-            #return redirect(url_for("login.html"))
 
         register = {
             "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password"), 'sha256')
+            "password": generate_password_hash(
+                request.form.get("password"), 'sha256')
         }
         mongo.db.users.insert_one(register)
 
@@ -62,7 +62,7 @@ def register():
 def unregister_event():
     if request.method == "POST":
         registration = {
-            "username": session["user"],                                                                        
+            "username": session["user"],
             "event_id": request.form.get("event_id")
         }
         mongo.db.registration.delete_many(registration)
@@ -74,7 +74,7 @@ def unregister_event():
 def delete_event():
     if request.method == "POST":
         event = {
-            "username": session["user"],                                                                        
+            "username": session["user"],
             "_id": ObjectId(request.form.get("delete_event"))
         }
         mongo.db.events.delete_one(event)
@@ -85,10 +85,10 @@ def delete_event():
 
 @app.route("/create_event", methods=["POST"])
 def create_event():
-    
+
     if request.method == "POST":
         event = {
-            "username": session["user"],                                                                        
+            "username": session["user"],
 
             "category_name": request.form.get("category_name"),
             "event_name": request.form.get("event_name"),
@@ -146,14 +146,13 @@ def login():
             # ensure hashed password matches user input
             if check_password_hash(
                     existing_user["password"], request.form.get("password")):
-                        session["user"] = request.form.get("username").lower()
-                        flash("Welcome, {}".format(
-                            request.form.get("username")))
-                        return redirect(url_for(
-                            "profile", username=session["user"]))
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(
+                        request.form.get("username")))
+                return redirect(url_for(
+                        "profile", username=session["user"]))
             else:
-                # invalid password 
-                print("wrong password")
+                # invalid password
                 flash("Incorrect Username or Password") 
                 # return redirect(url_for("index"))
         else:
@@ -197,11 +196,11 @@ def logout():
 
 @app.route("/register_events", methods=["GET", "POST"])
 def register_events(): 
-    if not session.get("user",None): 
+    if not session.get("user", None):
         return redirect(url_for("login"))
     if request.method == "POST":
         registration = {
-           "username": session["user"],                            
+            "username": session["user"],                      
             "event_id": request.form.get("event_id")
         }
         mongo.db.registration.insert_one(registration)
@@ -215,6 +214,7 @@ def contact():
         flash("Thank you for contacting us, {}".format(
            request.form.get("name")))
     return render_template("contact.html")
+
 
 @app.errorhandler(404)
 def page_not_found(e):
@@ -230,5 +230,5 @@ def internal_error(err):
 
 if __name__ == "__main__":
     app.run(
-        host=os.environ.get("IP","0.0.0.0"),
-        port=int(os.environ.get("PORT", "5000")),) 
+        host=os.environ.get("IP", "0.0.0.0"),
+        port=int(os.environ.get("PORT", "5000")),)
