@@ -2,6 +2,8 @@
 Welcome to Gabe's garden. Fed up with America's food choices in the cafeteria's across schools nationwide, 12-year-old Gabe has set out on a mission to change the way kids eat. Gabe's idea is to have a garden that is grown, cultivated, and maintained  by the students. The harvest will then be used for delicious and nutritious recipes in the our school's cafeterias created and hopefully cooked, by the students. The goal is to inspire as many schools as possible to begin their own garden's providing **real** nutrition to our children again and not being served the normalized frankenfood which is surely contributing to the childhood chronic illness epidemic across the United States.
 *[](https://.github.io/ /) 
 
+* ![Responsive Screens](static/img/responsive.png)
+
 ---
 
 ## Contents ##
@@ -126,6 +128,13 @@ View original wireframes here:
 
 [embed]http://example.com/file.pdf[/embed]
 ---
+
+#### Existing Wireframes
+
+
+View Existing Wireframes here:
+
+[embed]http://example.com/file.pdf[/embed]
 
 <a></a>
 
@@ -303,11 +312,11 @@ event_time       | String
 
 1. Add An Event
     - The user should be able to add a desired event.
-    - This can be completed by a register button on the form link.
+    - This can be completed by a create button on the form link.
     - The button sends the event data to the profile.
     - The event is then stored on the person's profile.
 
-2. Register
+2. Register for an event
     - The user must register in order to add an event.
     - The registraion works.
     - Werkzeug password security is implemented properly.
@@ -320,6 +329,7 @@ event_time       | String
     - The user is then prompted to their profile.
 
 4. Delete
+    - User will have the ability to delete their event 
 
 ### Responsive Design
 
@@ -345,14 +355,20 @@ event_time       | String
 * Resolution: 
 ---
 ---
-* Problem: 
-* Cause: 
-* Resolution: 
+* Problem: In the last hours of coding, Gitpod decided to make it even more eventful by not allowing Changes to the live-website 
+  The CSS changes being made were not being displayed.
+
+* Cause:  This was an IDE issue.
+
+* Resolution: This issue was not entirely solved. Throughout the last hours, I have had to completely stop my workspace. Shut it entirely down and 
+  and the restart by stopping  and resetting the workspace to render the changes made. 
 ---
 ---
-* Problem: 
-* Cause: 
-* Resolution: 
+* Problem: Profile returned 404 error event. "Undefined error: 'event' is undefined.
+
+* Cause: In  the middle of correcting cards fto be styled, I improperly deleted an important value tag needed to render the page.
+
+* Resolution: In order to solve this minor issue, I was returned the value tag to it's home and the profile page rendered properly again.
 ---
 ---
 * Problem: 
