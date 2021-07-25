@@ -95,10 +95,7 @@ The **goal**
 
 
 #### Fonts ####
-Big Shoulder Stencil display is the font chosen for the Title and headings. This font was chosen because it is bold, stands out, and the title looks amazing. I feel the characteristics of this font will really help bring the website to life. 
-
-Monda was chosen the paragraphs and information throughout the site. This style was chosen as it seems that the two fonts will compliment each other nicely. They wont be too different yet both are bold and stand out. i want the font to grasp the user's attention from the moment they hit the landing page and Monda paired with Big Shoulder Stencil Family is the perfect match.
-
+Poppins was chosen the paragraphs and information throughout the site. This style was chosen as it seems that the two fonts will compliment each other nicely. They wont be too different yet both are bold and stand out. I want the font to grasp the user's attention from the moment they hit the landing page.
 <a></a>
 
 #### Colours ####
@@ -126,15 +123,8 @@ This color went beautifully on the site. It nicely breaks up the black and white
 
 View original wireframes here:
 
-[embed]http://example.com/file.pdf[/embed]
+[Wireframes]statict/img/wireframes.pdf[/embed]
 ---
-
-#### Existing Wireframes
-
-
-View Existing Wireframes here:
-
-[embed]http://example.com/file.pdf[/embed]
 
 <a></a>
 
@@ -398,8 +388,8 @@ event_time       | String
 ### Issues and resolutions
 ---
 * Problem: The mobile-first side nav links are not dislplaying. The error is "toggle is not defined"
-* Cause: 
-* Resolution: 
+* Cause: The cause was that toggle was not defined.
+* Resolution: This was solved by calling the toggle functionin JS.
 ---
 ---
 * Problem: In the last hours of coding, Gitpod decided to make it even more eventful by not allowing Changes to the live-website 
@@ -424,6 +414,9 @@ event_time       | String
 
 * Resolution: Detect duplicate username and redirect to the login page.
 ---
+* Problem: The cards are not rendering properly on the screen for the profile page.
+* Cause: Unresolved issue that must be addressed.
+* Resolution: Uknown at this point.
 ### Unresolved Issues
 ---
 * Poor breakdown response on Galaxy Fold.
@@ -432,6 +425,8 @@ event_time       | String
   reflects poorly on the app and is quite an issue. This problem will need to be resolved in the future.
   
 * Create event card, I cannot implement jinja templating as it is a custom event. I cannot remove the value either. The value of the image then stays on the card. I ran out of time and brainspace to fix this error as well.
+
+* Cards will not render properly onto the profile page screen.
 ---
 
 ## **Deployment**
