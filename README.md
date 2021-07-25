@@ -165,9 +165,10 @@ View Existing Wireframes here:
 <a></a>
 
 
-For the landing page, I went with a simple hero image with bold writing overlaying the top.
 
-#### Landing Page 
+3. Landing Page 
+
+For the landing page, I went with a simple hero image with bold writing overlaying the top
 
 - Hero Image
 
@@ -182,14 +183,18 @@ For the landing page, I went with a simple hero image with bold writing overlayi
     ---
 
     * ![Mobile View](static/img/mobile-landing.png)
+    
     <a></a>
-## Footer and Contact Form
+4. Footer and Contact Form
 
  The footer is essentially a contact form. The footer also displays links to social media and copyright information.
 
 * ![Contact Form](static/img/contact.png)
+
 <a></a>
-## Events
+
+5. Events
+
  The event page will feature an image but the main point of the page will be the cards that display the events seen here.
 
 - The site includes an event page.
@@ -211,11 +216,17 @@ For the landing page, I went with a simple hero image with bold writing overlayi
   - Name
   - Password
 
-## Sign Up Page
--  
+## Register Page
+
+- There will be three tezt inputs on the register page:
+  - Name
+  - Email
+  - Password
+ 
 ## Profile
 
-- Users will have a very simple profile where they can add or delete the events they have signed up for.
+- Users will have a very simple profile where the events they register or create will be 
+ displayed. The user will have the ability to add or delete the events they have signed up for.
 
 ## Features Implemented ###
 
@@ -227,10 +238,17 @@ Another feature to be implemented will  be a donation link capable of accepting 
 
 - **Social media links**
 
-The site has social media links displayed at the footer of the page, as well as a button to take them to the contact/feedback form.
+The site has social media links displayed at the footer of the page. The links work properly and take the user to their desired platform.
 
 
-- **Functional contact form**
+**Contact Form**
+The contact form is displayed boldy at the bottom of the page. You cannot miss it. Users will be able to input their personal details and connect with the garden.
+
+**Create Your Own Event**
+The create your own event feature is perfect for all occasions. Homeschooling? Potluck? Volunteer on your own terms. These features will 
+give the users their own personal experience when visiting the garden.
+
+
 
 <a></a>
 
@@ -239,7 +257,7 @@ The site has social media links displayed at the footer of the page, as well as 
 
 ### Considered Features ###
 
-- **Users do not have an option to choose levels or tasks of the game**
+- Sending the users reminders for their upcoming events or ability to sync it with their calendars.
 
 [Back to Top](#table-of-contents)
 
@@ -303,6 +321,14 @@ event_time       | String
 <a></a>
 
 ## **TESTING**
+
+### Validators
+
+- HTML was ran through validator. Returned errors associated with Jinja Templating.[HTML Resutls](Validator.nu/LV http://validator.w3.org/services)
+- CSS was passed through a validator. Errors returned were inregards to colors.[W3C](https://jigsaw.w3.org/css-validator/#validate_by_input)
+- JS was passed through JSHint and threw to warning in regards to JQuery strings which were ignored. [JSHint](https://jshint.com/)
+- Python was passed through PEP8 and returned mountain of trailing white space errors. All were deleted[Python](http://pep8online.com/checkresult#)
+  The two major errors were associated with impost env and json which were ignored.
 
 ### UI
 
