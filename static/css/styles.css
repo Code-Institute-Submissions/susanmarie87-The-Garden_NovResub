@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
 * {
     margin: 0;
@@ -78,6 +78,7 @@ header ul li a {
 .banner h2 {
     color: #fff;
     font-size: 90px;
+    font-family: 'Big Shoulder Stencil Text', sans-serif;
     text-transform: uppercase;
     text-align: center;
     line-height: 1em;
@@ -91,6 +92,8 @@ header.sticky .logo,
 header.sticky ul li a {
     color: #000;
 }
+
+/***********Who WE ARE****************/
 
 .sec {
     background: #fff;
@@ -107,6 +110,7 @@ header.sticky ul li a {
     width: 100%;
 }
 
+/***********Our Mission Content****************/
 .mxw800p {
     max-width: 800px;
     margin: 0 auto;
@@ -126,6 +130,7 @@ p {
     letter-spacing: 1px;
 }
 
+/***********Logo Boxes****************/
 .services {
     position: relative;
     display: grid;
@@ -160,6 +165,7 @@ p {
     font-weight: 700;
 }
 
+/***********Taking Our Food Back****************/
 .stats {
     padding-top: 250px;
     background: #000;
@@ -193,6 +199,7 @@ p {
     letter-spacing: 2px;
 }
 
+/***********Landing page event links****************/
 .workBx {
     position: relative;
     display: grid;
@@ -221,7 +228,7 @@ p {
     text-decoration: none;
     color: rgba(255, 255, 255, .4);
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 4px;
     letter-spacing: 2px;
 }
 
@@ -230,6 +237,7 @@ p {
     color: #fff;
 }
 
+/***********The Team****************/
 .teamBx {
     position: relative;
     display: grid;
@@ -298,7 +306,7 @@ p {
     font-weight: 300;
 }
 
-/* Contact Form */
+/******* Contact Form *********/
 .contact {
     background: #000;
 }
@@ -363,7 +371,6 @@ p {
     background: #fff;
     color: #000;
     max-width: 100px;
-    margin: none;
     text-transform: uppercase;
     letter-spacing: 2px;
     cursor: pointer;
@@ -410,7 +417,7 @@ p {
     display: none;
 }
 
-/* mEDIA QUERIES */
+/****** MavBar Media Queries *******/
 
 @media (max-width: 992px) {
     .toggle {
@@ -505,6 +512,7 @@ p {
         color: #000;
     }
 
+    /***********Hero Image Media Queries***************/
     .banner {
         background-position: center;
     }
@@ -523,6 +531,7 @@ p {
         line-height: 1em;
     }
 
+    /***********Logo box media queries****************/
     .services {
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     }
@@ -535,6 +544,7 @@ p {
         padding-top: 250px;
     }
 
+    /***********Contact Form Media Queries****************/
     .conactForm .row100 {
         flex-direction: column;
     }
@@ -559,30 +569,8 @@ p {
     }
 }
 
-/*Profile*/
-/*.banner-3 {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    background: url('../img/garden-party.jpg');
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
 
 /*Register and Login Form*/
-/*.banner-1 {
-    position: relative;
-    background: url('../img/backgroud.jpg');
-    display: flex;
-    padding: 20px;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
-}*/
 
 section .container {
     position: relative;
@@ -739,8 +727,81 @@ section .container.active .signinBx .imgBx {
     }
 }
 
+/*Login PAGE*/
+.container-login {
+    background: url('../img/backgroud.jpg');
+    padding: 1rem;
+    padding-top: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 /* -- Events */
-.banner-4 {
+
+
+/* Buttons On Event Cards*/
+
+.button1 {
+    border: black;
+    color: white;
+    padding: 10px 15px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 4px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: cadetblue color;
+    color: black;
+    border: 2px solid cadetblue;
+}
+
+
+.button2 {
+    border: black;
+    color: white;
+    padding: 10px 15px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 4px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button2 {
+    background-color: cadetblue color;
+    color: black;
+    border: 2px solid cadetblue;
+}
+
+
+.container-profile {
+    background: url('../img/backgroud.jpg');
+    padding: 1rem;
+    padding-top: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.row {
+    float: left;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* -- Event Page Banner images */
+.banner-6 {
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -751,18 +812,7 @@ section .container.active .signinBx .imgBx {
     align-items: center;
 }
 
-/* -- Events and Cards */
-.banner-5 {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    background: url('../img/garden-kids.jpg');
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+/* -- Event Card images */
 img {
     display: block;
     width: 100%;
@@ -845,76 +895,11 @@ img {
     }
 }
 
-.banner-2 {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    background: url('../img/garden-kids.jpg');
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Buttons On Event Cards*/
-
-.button1 {
-    border: black;
-    color: white;
-    padding: 10px 15px;
-    text-align: left;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 8px 4px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-
-.button1 {
-    background-color: cadetblue color;
-    color: black;
-    border: 2px solid cadetblue;
-}
-
-
-.button2 {
-    border: black;
-    color: white;
-    padding: 10px 15px;
-    text-align: left;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 8px 4px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-
-.button2 {
-    background-color: cadetblue color;
-    color: black;
-    border: 2px solid cadetblue;
-}
-
 /* FLASH MESSAGES */
 .flashes h4 {
     line-height: 2;
 }
 
-/*404 Error Page */
-.container-404 {
-    min-height: 100 vh;
-    background-image: linear-gradient(125deg, #009999, #ddebeb);
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    color: #343434;
-}
-
-/*Profile PAGE*/
 
 .container-fluid {
 
@@ -940,16 +925,7 @@ img {
 
 }
 
-/*Error PAGE*/
-
-error-page {
-    position: absolute;
-    top: 10%;
-    left: 17%;
-    right: 17%;
-    bottom: 20% display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+.row {
+    display: flex;
+    justify-content: space-between;
 }
