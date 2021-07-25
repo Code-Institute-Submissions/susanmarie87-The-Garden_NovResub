@@ -104,7 +104,7 @@ def create_event():
 def open_edit_event():
     if request.method == "POST":
         event_filter = {
-            "username": session["user"],                                                                        
+            "username": session["user"],
             "_id": ObjectId(request.form.get("open_edit_event"))
         }
 
@@ -118,7 +118,7 @@ def open_edit_event():
 def edit_event():
     if request.method == "POST":
         event = {
-            "username": session["user"],                                                                        
+            "username": session["user"],
             "_id": ObjectId(request.form.get("commit_edit_event")),
             "category_name": request.form.get("category_name"),
             "event_name": request.form.get("event_name"),
@@ -127,7 +127,7 @@ def edit_event():
         }
 
         event_filter = {
-            "username": session["user"],                                                                        
+            "username": session["user"],
             "_id": ObjectId(request.form.get("commit_edit_event"))
         }
         mongo.db.events.replace_one(event_filter, event)
@@ -152,7 +152,7 @@ def login():
                         "profile", username=session["user"]))
             else:
                 # invalid password
-                flash("Incorrect Username or Password") 
+                flash("Incorrect Username or Password")
                 # return redirect(url_for("index"))
         else:
             # username doesn't exist
@@ -170,7 +170,7 @@ def profile(username):
 
     if session["user"]:
         registrations = list(mongo.db.registration.find(
-            {"username": session["user"]}, 
+            {"username": session["user"]},
             {"event_id": 1}).distinct("event_id"))
         registrations = [ObjectId(event_id) for event_id in registrations]
         events = list(mongo.db.events.find(
@@ -194,12 +194,12 @@ def logout():
 
 
 @app.route("/register_events", methods=["GET", "POST"])
-def register_events(): 
+def register_events():
     if not session.get("user", None):
         return redirect(url_for("login"))
     if request.method == "POST":
         registration = {
-            "username": session["user"],                      
+            "username": session["user"],
             "event_id": request.form.get("event_id")
         }
         mongo.db.registration.insert_one(registration)
