@@ -40,7 +40,7 @@ def register():
 
         if existing_user:
             flash("Username already exists")
-            return redirect(url_for("profile"))
+            return redirect(url_for("profile", username=session["user"]))
 
         register = {
             "username": request.form.get("username").lower(),
@@ -65,7 +65,7 @@ def unregister_event():
         }
         mongo.db.registration.delete_many(registration)
         flash("You're successfully unregistered!")
-    return redirect(url_for("profile", username=session ["user"]))
+    return redirect(url_for("profile", username=session["user"]))
 
 
 @app.route("/delete_event", methods=["POST"])
@@ -77,7 +77,8 @@ def delete_event():
         }
         mongo.db.events.delete_one(event)
         flash("You have deleted this event!")
-    return redirect(url_for("profile", username=session ["user"]))
+    return redirect(url_for(
+        "profile", username=session["user"]))
 
 
 @app.route("/create_event", methods=["POST"])
@@ -98,7 +99,7 @@ def create_event():
     return redirect(url_for("events"))
 
 
-@app.route ("/open_edit_event", methods=["POST"])
+@app.route("/open_edit_event", methods=["POST"])
 def open_edit_event():
     if request.method == "POST":
         event_filter = {
@@ -131,6 +132,7 @@ def edit_event():
         mongo.db.events.replace_one(event_filter, event)
         flash("You have edited your event!")
     return redirect(url_for("profile", username=session["user"]))
+
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -178,7 +180,7 @@ def profile(username):
 
         return render_template(
             "profile.html", username=username, events=events,
-             my_events=my_events)
+            my_events=my_events)
 
     return redirect(url_for("login"))
 
@@ -191,42 +193,40 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/register_events", methods=["GET", "POST"]) 
+@app.route("/register_events", methods=["GET", "POST"])
 def register_events(): 
-    if not session.get("user", None): 
+    if not session.get("user",None): 
         return redirect(url_for("login"))
     if request.method == "POST":
         registration = {
-            "username": session["user"],                                                                        
+           "username": session["user"],                            
             "event_id": request.form.get("event_id")
         }
         mongo.db.registration.insert_one(registration)
         flash("You're successfully registered!")
-    return redirect(url_for("profile", username=session ["user"]))
+    return redirect(url_for("profile", username=session["user"]))
 
 
 @app.route("/contact")
 def contact():
     if request.method == "POST":
-       flash("Thank you for contacting us, {}".format(
+        flash("Thank you for contacting us, {}".format(
            request.form.get("name")))
     return render_template("contact.html")
-    
-    
+
 @app.errorhandler(404)
 def page_not_found(e):
 
     return render_template('404.html'), 404
 
+
 @app.errorhandler(500)
 def internal_error(err):
 
     return render_template('500.html'), 500
-  
 
 
 if __name__ == "__main__":
     app.run(
-        host=os.environ.get("IP", "0.0.0.0"),
+        host=os.environ.get("IP","0.0.0.0"),
         port=int(os.environ.get("PORT", "5000")),) 
-        
