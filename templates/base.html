@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="#">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.cssrel=">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@600&display=swap">
+    <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel=" stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" type="text/css" />
     <title>Gabe's Garden</title>
 </head>
 
@@ -58,29 +61,29 @@
                 <form>
                     <div class="row100">
                         <div class="inputBx50">
-                            <input type="text" name="" placeholder="Full Name">
+                            <input type="text" name="name" placeholder="Full Name">
                         </div>
                         <div class="inputBx50">
-                            <input type="text" name="" placeholder="Email Address">
+                            <input type="text" name="email" placeholder="Email Address">
                         </div>
                     </div>
                     <div class="row100">
                         <div class="inputBx100">
-                            <textarea placeholder="Message"></textarea>
+                            <textarea placeholder="Message" name="message"></textarea>
                         </div>
                     </div>
                     <div class="row100">
                         <div class="inputBx100">
-                            <input type="submit" value="Send" name="">
+                            <input type="submit" value="Send" name="submit">
                         </div>
                     </div>
                 </form>
             </div>
             <div class="sci">
                 <ul>
-                    <li><a href="https://www.facebook.com"><img src="/static/img/facebook.png"></a></li>
-                    <li><a href="https://www.twitter.com"><img src="/static/img/twitter.png"></a></li>
-                    <li><a href="https://www.instagram.com"><img src="/static/img/linkedin.png"></a></li>
+                    <li><a href="https://www.facebook.com"><img src="/static/img/facebook.png" alt="facebook"></a></li>
+                    <li><a href="https://www.twitter.com"><img src="/static/img/twitter.png" alt="twitter"></a></li>
+                    <li><a href="https://www.instagram.com"><img src="/static/img/linkedin.png" alt="linkedin"></a></li>
                 </ul>
             </div>
             <p class="copyright">Gabe's Garden | Copyright © 2021</p>
