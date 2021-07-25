@@ -173,16 +173,22 @@ For the landing page, I went with a simple hero image with bold writing overlayi
 
     - Gabe's Garden index page will feature an image of a group of kids excited and happy to be growing their own vegetables.
 
-    * ![Landing Page](static/img/landing.png)
+    * ![Desktop View](static/img/landing.png)
 
+     ---
+
+    * ![Tablet view](static/img/tablet-landing.png) 
+
+    ---
+
+    * ![Mobile View](static/img/mobile-landing.png)
     <a></a>
-
 ## Footer and Contact Form
 
  The footer is essentially a contact form. The footer also displays links to social media and copyright information.
 
 * ![Contact Form](static/img/contact.png)
-
+<a></a>
 ## Events
  The event page will feature an image but the main point of the page will be the cards that display the events seen here.
 
