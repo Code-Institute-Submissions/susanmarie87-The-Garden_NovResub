@@ -371,9 +371,11 @@ event_time       | String
 * Resolution: In order to solve this minor issue, I was returned the value tag to it's home and the profile page rendered properly again.
 ---
 ---
-* Problem: 
-* Cause: 
-* Resolution: 
+* Problem: Improperly detecting and existing user re-registering.
+
+* Cause: Duplicate username being used. 
+
+* Resolution: Detect duplicate username and redirect to the login page.
 ---
 ### Unresolved Issues
 ---
