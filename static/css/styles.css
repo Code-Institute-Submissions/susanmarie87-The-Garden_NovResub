@@ -9,6 +9,7 @@
 
 html {
     scroll-behavior: smooth;
+
 }
 
 header {
@@ -362,6 +363,10 @@ p {
     height: 100px;
 }
 
+#contact.sec.contact {
+    margin: 0px 0px 0px;
+}
+
 .contactForm .row100 input::placeholder,
 .contactForm .row100 textarea::placeholder {
     color: rgba(255, 255, 255, .5);
@@ -520,6 +525,11 @@ p {
     .banner h2 {
         font-size: 60px;
         padding: 0 50px;
+    }
+
+    #home.banner {
+        padding: 0;
+        margin: 0;
     }
 
     .sec {
@@ -735,7 +745,6 @@ section .container.active .signinBx .imgBx {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 /* -- Events */
