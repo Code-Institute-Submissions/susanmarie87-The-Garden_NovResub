@@ -25,6 +25,11 @@ def index():
     return render_template("index.html")
 
 
+@app.route("/blog")
+def blog():
+    return render_template("blog.html")
+
+
 @app.route("/events")
 def events():
     events = list(mongo.db.events.find())
