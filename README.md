@@ -119,29 +119,22 @@ This color went beautifully on the site. It nicely breaks up the black and white
 <a></a>
 
 ## Features ##
+---
 
 <a></a>
 
 ## Existing Features
 
-1. Navbar
-    - The navigation bar will display Gabe's Garden logo on the top left corner.
-    - The navbar will display page links on the right side.
-    - The navbar will break down into a hamburger to become mobile responsive.
-    - The navbar will display the links to the pages which are:
+ Navbar
 
-        - Home
-        - Events
-        - LogIn
-        - SignUp
+     The navigation bar will display Gabe's Garden logo on the top left    
+     The navbar will display page links on the right side.
+     The navbar will break down into a hamburger to become mobile responsive.
+     The navbar will display the links to the pages which are:
         
  2. Contact Form
-    - The  contact form acts as both a contact form and footer.
-
-          - Contact Form
-          - Social media links
-          - Copyright information
-
+    
+     The  contact form acts as both a contact form and footer.
 <a></a>
 
 
@@ -154,22 +147,11 @@ For the landing page, I went with a simple hero image with bold writing overlayi
 
     - Gabe's Garden index page will feature an image of a group of kids excited and happy to be growing their own vegetables.
 
-    * ![Desktop View](static/img/landing.png)
-
-     ---
-
-    * ![Tablet view](static/img/tablet-landing.png) 
-
-    ---
-
-    * ![Mobile View](static/img/mobile-landing.png)
     
     <a></a>
 4. Footer and Contact Form
 
  The footer is essentially a contact form. The footer also displays links to social media and copyright information.
-
-* ![Contact Form](static/img/contact.png)
 
 <a></a>
 
@@ -180,11 +162,6 @@ For the landing page, I went with a simple hero image with bold writing overlayi
 - The site includes an event page.
    - Events will include: 
    - classes, parties, festivals, and much more.
-
-
-* ![Event Page](static/img/event.png)
-
----
 
 
   Events will be displayed on cards with two buttons. One to register and one to remove the event.
@@ -249,15 +226,20 @@ give the users their own personal experience when visiting the garden.
 
 MongoDB was used to set the database for this project
 
-#### **Users:**
 
-Key      | Value
----------|-----------
-_id      | ObjectId
-username | String
-password | String
+**Users Data**
+<a></a>
 
-#### **Events:**
+
+| Key     |  Value|   |   |   
+|---------|-------|---|---|
+| _id     | ObjectId  |   | 
+|username | String    |   | 
+|password | String    |   |
+
+**Event Data**
+<a></a>
+
 
 Key              | Value
 -----------------|-----------
@@ -271,7 +253,8 @@ event_time       | String
 
 <a></a>
 
-## Technologies ##
+## Technology Used ##
+---
 
 ### Languages ###
 
@@ -298,9 +281,9 @@ event_time       | String
 
 ---
 
-<a></a>
 
-## **TESTING**
+## TESTING
+---
 
 ### Validators
 
@@ -312,30 +295,33 @@ event_time       | String
 
 ### UI
 
-1. Navigation
-    - The navigation works as it's supposed to across all screens. In full width, the navbar displays links across the top of the page.
-    When the app is open on smaller screens it displays properly as a hamburger with the toggle function to drop the navlinks.
-    - The navbar displays properly across all browsers at each break point. The links all work properly as well. 
+ ### Navigation
 
-2. Contact Form
-    - The contact form displays correct on all pages except for the profile page.
-    - The contact form lets the user send a message over to the organization on all browsers.
-    - The contact form links display properly across all browsers.
+  - The navigation works as it's supposed to across all screens. In full width,the navbar displays links across the top of the page.
+  - When the app is open on smaller screens it displays properly as a hamburger with the toggle function to drop the navlinks.
+  - The navbar displays properly across all browsers at each break point. The links all work properly as well. 
 
-3.  Login and Registration Form
-    - The login ad registration form do not display properly when ran through all of the browsers. The input boxes on the lgin form beome rather large  and look out of place but I have run out time to fix that.
+### Contact Form
+- The contact form displays correct on all pages except for the profile page.
+- The contact form lets the user send a message over to the organization on all browsers.
+- The contact form links display properly across all browsers.
 
-    - The forms do  function properly across all browsers. When a user registers, they are prompted back to the login page. Once logged in, they will  be prompted to their profile page
+### Login and Registration Form
+- The login ad registration form do not display properly when ran through all of the browsers. The input boxes on the lgin form beome rather large  and look out of place but I have run out time to fix that.
 
-4. Events 
-   - The events display properly across all browsers. 
-   - The user is able to register for the event, which then displays on their profile page.
+- The forms do  function properly across all browsers. When a user registers, they are prompted back to the login page. Once logged in, they will  be prompted to their profile page
 
-5. Create Event
-   - The user is able to successfully create an event across all browsers. The event then displays on the events page.
+### Events 
+- The events display properly across all browsers. 
+- The user is able to register for the event, which then displays on their profile page.
 
-   - The create event function is easy to edit and also delete.
-### Functionality 
+### Create Event
+- The user is able to successfully create an event across all browsers. The event then displays on the events page.
+
+- The create event function is easy to edit and also delete.
+
+
+ ## Functionality 
 
 1. Add An Event
     - The user should be able to add a desired event.
@@ -517,71 +503,56 @@ To clone the project:
 
 <a></a>
 ## Credits ##
+---
 
 
-### Images ###
+### Images 
 
+- [Cooking Class photo by: Gareth Hubbard](https://unsplash.com/photos/qPcSUERqBAc)
 
+- [Dance Party photo by: Ben Rosett](https://unsplash.com/photos/nYugmV-SY6s)
 
-[Cooking Class photo by: Gareth Hubbard](https://unsplash.com/photos/qPcSUERqBAc)
+- [Future Leader Kiana Bosman](https://unsplash.com/photos/0pB01U2NDCQ)
 
-[Dance Party photo by: Ben Rosett](https://unsplash.com/photos/nYugmV-SY6s)
+- [Hero Image](https://phys.org/news/2018-09-kids-food-gardening.html)
 
-[Future Leader Kiana Bosman](https://unsplash.com/photos/0pB01U2NDCQ)
+- [Water Conservation photo by: Johnathan Kemper](https://unsplash.com/photos/xvVAkT3I-84)
 
-[Hero Image](https://phys.org/news/2018-09-kids-food-gardening.html)
+- [Little girl with plants by: Jonathan Borba](https://unsplash.com/@jonathanborba)
 
-[Water Conservation photo by: Johnathan Kemper](https://unsplash.com/photos/xvVAkT3I-84)
+- [Planter-Box](https://www.hercampus.com/school/u-mass-amherst/growing-garden-kitchen-scraps/)
 
-[Little girl with plants by: Jonathan Borba](https://unsplash.com/@jonathanborba)
+- [Smiling boy with book by: Ben White](https://unsplash.com/photos/4K2lIP0zc_k)
 
-[Planter-Box](https://www.hercampus.com/school/u-mass-amherst/growing-garden-kitchen-scraps/)
+- [Elaine Casa](https://unsplash.com/photos/qgHGDbbSNm8)
 
-[Smiling boy with book by: Ben White](https://unsplash.com/photos/4K2lIP0zc_k)
+- [Water-boy photo by: Filip Urban](https://unsplash.com/photos/ffJ8Qa0VQU0)
 
-[Elaine Casa](https://unsplash.com/photos/qgHGDbbSNm8)
+- [Volunteer by: Anna Earl](https://unsplash.com/photos/J-Jb1niw1j0)
 
-[Water-boy photo by: Filip Urban](https://unsplash.com/photos/ffJ8Qa0VQU0)
+- [Yoga Gnome by: Dorota Dylka](https://unsplash.com/photos/Y6nFvt1ebyw)
 
-[Volunteer by: Anna Earl](https://unsplash.com/photos/J-Jb1niw1j0)
+- [Photo by:Aleksandra Sapozhnikova](https://unsplash.com/photos/N3DbwlJZpRU)
 
-[Yoga Gnome by: Dorota Dylka](https://unsplash.com/photos/Y6nFvt1ebyw)
+- [Photo by:Aleksandra Sapozhnikova]("https://unsplash.com/@rruprrup?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText") 
 
-[Photo by:Aleksandra Sapozhnikova](https://unsplash.com/photos/N3DbwlJZpRU)
+- [Photo by:Runze Shi]("https://unsplash.com/@wizard_s?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText")
 
-[Photo by:Aleksandra Sapozhnikova]("https://unsplash.com/@rruprrup?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText") 
+- Photo by Artem Beliaikin from Pexels (apple trees)
 
+- Photo by Artem Beliaikin from Pexels (apple trees)
   
-[Photo by:Runze Shi]("https://unsplash.com/@wizard_s?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText")
+- paige-cody-z8gKIE4Kz0Y-unsplash (3) (little boy carrying bucket)
+- samantha-gades-fIHozNWfcvs-unsplash (1) (outdoor party redhat)
 
 
-
-Photo by Artem Beliaikin from Pexels (apple trees)
-
-Photo by Artem Beliaikin from Pexels (apple trees)
-  
-
-paige-cody-z8gKIE4Kz0Y-unsplash (3) (little boy carrying bucket)
-
-samantha-gades-fIHozNWfcvs-unsplash (1) (outdoor party redhat)
-### Colour ###
-
-
-
-### Image editing ###
-
-
-### Code ideas ###
-
-Website template adapted from:
-
+## Website Template Acknowledgement
 [Website Template](https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog)
 
---
-Cards for events adapted from:
+
+## Cards for events adapted from:
 
 [Event Card](https://codepen.io/RajRajeshDn/pen/qBEGeEp(cards))
-- 
 
 [Back to content](#contents)
 
