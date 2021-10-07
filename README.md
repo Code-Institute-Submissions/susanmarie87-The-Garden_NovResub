@@ -1,12 +1,14 @@
-# Gabe’s Garden #
-Welcome to Gabe's garden. Fed up with America's food choices in the cafeteria's across schools nationwide, 12-year-old Gabe has set out on a mission to change the way kids eat. Gabe's idea is to have a garden that is grown, cultivated, and maintained  by the students. The harvest will then be used for delicious and nutritious recipes in the our school's cafeterias created and hopefully cooked, by the students. The goal is to inspire as many schools as possible to begin their own garden's providing **real** nutrition to our children again and not being served the normalized frankenfood which is surely contributing to the childhood chronic illness epidemic across the United States.
-*[](https://.github.io/ /) 
+![Responsive Screens](static/img/responsive.png)
 
-* ![Responsive Screens](static/img/responsive.png)
+# <strong>Gabe’s Garden</strong> #
 
+
+Gabe's Garden is a nonprofit startup garden that hopes to bring the farm-to-table old fahsioned trend into schools. Not only would the children help grow the garden, they could play a role in meal and food preparation as well. Gabe's Garden is starting for Little Rock Falls Elementary and hopes the idea spreads like wild fire throughout the world.
+
+
+
+## Table of Contents ##
 ---
-
-## Contents ##
 
 - [UX (User Experience)](#ux-user-experience)
   - [Project Goals](#project-goals)
@@ -37,15 +39,9 @@ Welcome to Gabe's garden. Fed up with America's food choices in the cafeteria's 
   - [Code Ideas](#code-ideas)
 - [Acknowledgements](#acknowledgements)
 
+
+## UX ##
 ---
-
-## UX (User Experience) ##
-
-
-### Project Goals ###
-
-The **goal** 
-
 ### User Goals ###
 
 - **Learn about the mission of Gabe's Garden** 
@@ -98,7 +94,7 @@ The **goal**
 Poppins was chosen the paragraphs and information throughout the site. This style was chosen as it seems that the two fonts will compliment each other nicely. They wont be too different yet both are bold and stand out. I want the font to grasp the user's attention from the moment they hit the landing page.
 <a></a>
 
-#### Colours ####
+#### Colors ####
 
 An array of colors were used throughout the site. In the spirit of simplicity though, the predominant colors on the site are white and black.
 
@@ -118,13 +114,7 @@ This color went beautifully on the site. It nicely breaks up the black and white
 
 ## **Wireframes**
 
-#### Original Wireframes
 
-
-View original wireframes here:
-
-[Wireframes]statict/img/wireframes.pdf[/embed]
----
 
 <a></a>
 
