@@ -1,0 +1,25 @@
+{
+  "name": "the-garden",
+  "version": "1.0.0",
+  "description": "![Responsive Screens](static/img/responsive.png)",
+  "main": "index.js",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
+    "emailjs-com": "^3.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/susanmarie87/The-Garden.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/susanmarie87/The-Garden/issues"
+  },
+  "homepage": "https://github.com/susanmarie87/The-Garden#readme"
+}
