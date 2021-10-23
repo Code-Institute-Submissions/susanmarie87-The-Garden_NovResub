@@ -21,6 +21,9 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+"""
+Returns index.html template
+"""
 def index():
     return render_template("index.html")
 
@@ -32,14 +35,19 @@ def blog():
 
 @app.route("/events")
 def events():
+    """
+    Returns events.html template
+    """
     events = list(mongo.db.events.find())
     return render_template("events.html", events=events)
 
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    """
+    Allows user to register event.
+    """
     if request.method == "POST":
-        # check if username already exists in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
@@ -64,6 +72,9 @@ def register():
 
 @app.route("/unregister_event", methods=["POST"])
 def unregister_event():
+    """
+    Allows user to unregister their event.
+    """
     if request.method == "POST":
         registration = {
             "username": session["user"],
@@ -76,6 +87,9 @@ def unregister_event():
 
 @app.route("/delete_event", methods=["POST"])
 def delete_event():
+    """
+    Allows user to delete an event
+    """
     if request.method == "POST":
         event = {
             "username": session["user"],
@@ -89,6 +103,10 @@ def delete_event():
 
 @app.route("/create_event", methods=["POST"])
 def create_event():
+
+    """
+    Allows user to create an event
+    """
 
     if request.method == "POST":
         event = {
@@ -107,6 +125,10 @@ def create_event():
 
 @app.route("/open_edit_event", methods=["POST"])
 def open_edit_event():
+
+    """
+    Returns edit event template
+    """
     if request.method == "POST":
         event_filter = {
             "username": session["user"],
@@ -121,6 +143,9 @@ def open_edit_event():
 
 @app.route("/edit_event", methods=["POST"])
 def edit_event():
+    """
+    Allows user to edit their registered event details.
+    """
     if request.method == "POST":
         event = {
             "username": session["user"],
@@ -142,6 +167,9 @@ def edit_event():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    """
+    REturns login page. Checks for existing username and password.
+    """
     if request.method == "POST":
         # check for existing username
         existing_user = mongo.db.users.find_one(
@@ -169,7 +197,9 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    # grab the session user's username from db
+    """
+    Grabs the session user's username from db
+    """
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
@@ -192,7 +222,9 @@ def profile(username):
 
 @app.route("/logout")
 def logout():
-
+    """
+    Logs User Out.
+    """
     flash("You are logged out")
     session.pop("user")
     return redirect(url_for("login"))
@@ -200,6 +232,9 @@ def logout():
 
 @app.route("/register_events", methods=["GET", "POST"])
 def register_events():
+    """
+    Returns register page. ALlows user to create new account.
+    """
     if not session.get("user", None):
         return redirect(url_for("login"))
     if request.method == "POST":
@@ -214,6 +249,9 @@ def register_events():
 
 @app.route("/contact")
 def contact():
+    """
+    Flashes succesful contact message to user
+    """
     if request.method == "POST":
         flash("Thank you for contacting us, {}".format(
            request.form.get("name")))
@@ -221,13 +259,19 @@ def contact():
 
 
 @app.errorhandler(404)
-def page_not_found(e):
+def not_found(e):
+    """
+    On 400 error user will be oassed to custom error page.
+    """
 
     return render_template('404.html'), 404
 
 
 @app.errorhandler(500)
 def internal_error(err):
+    """
+    On 500 error user will be oassed to custom error page.
+    """
 
     return render_template('500.html'), 500
 
