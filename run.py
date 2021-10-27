@@ -16,14 +16,12 @@ app = Flask(__name__)
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
+DEVELOPMENT = True
 
 mongo = PyMongo(app)
 
 
 @app.route("/")
-"""
-Returns index.html template
-"""
 def index():
     return render_template("index.html")
 
@@ -103,11 +101,9 @@ def delete_event():
 
 @app.route("/create_event", methods=["POST"])
 def create_event():
-
     """
     Allows user to create an event
     """
-
     if request.method == "POST":
         event = {
             "username": session["user"],
@@ -125,7 +121,6 @@ def create_event():
 
 @app.route("/open_edit_event", methods=["POST"])
 def open_edit_event():
-
     """
     Returns edit event template
     """
@@ -168,7 +163,7 @@ def edit_event():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """
-    REturns login page. Checks for existing username and password.
+    Returns login page. Checks for existing username and password.
     """
     if request.method == "POST":
         # check for existing username
@@ -263,7 +258,6 @@ def not_found(e):
     """
     On 400 error user will be oassed to custom error page.
     """
-
     return render_template('404.html'), 404
 
 
@@ -272,7 +266,6 @@ def internal_error(err):
     """
     On 500 error user will be oassed to custom error page.
     """
-
     return render_template('500.html'), 500
 
 
