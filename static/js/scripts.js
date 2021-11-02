@@ -5,14 +5,14 @@ window.addEventListener("scroll", function () {
 
 function toggle() {
     var header = document.getElementById('header');
-    header.classList.toggle('active');
+    header.classList.toggle('active')
 }
 
 function toggleForm() {
     var container = document.querySelector('.container');
     var section = document.querySelector('section');
-    container.classList.toggle('active');
-    section.classList.toggle('active');
+    container.classList.toggle('active')
+    section.classList.toggle('active')
 }
 
 $('.collapsible').collapsible();
