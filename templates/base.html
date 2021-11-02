@@ -12,7 +12,7 @@
     <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" type="text/css" />
-    <link rel="shortcut icon" href="#">
+    <link rel="shortcut icon" href="/favicon.ico">
     <title>Gabe's Garden</title>
 </head>
 
@@ -39,7 +39,6 @@
                     onclick="toggle()">Profile</a></li>
             <li><a class="nav-link" href="{{ url_for('register_events') }}" onclick="toggle()">Register Event</a>
             </li>
-            <li><a class="nav-link" href="{{ url_for('blog') }}" onclick="toggle()">Blog</a></li>
             <li><a class="nav-link" href="{{ url_for('logout') }}" onclick="toggle()">Logout</a></li>
             {% else %}
             <li><a class="nav-link" href="{{ url_for('login') }}" onclick="toggle()">Login</a></li>
@@ -54,44 +53,43 @@
     <!-- Contact Forms-->
     <section class="sec contact" id="contact">
         <div class="content">
-                <div class="mxw800p">
-                    <h3>Send Us A Message</h3>
-                    <p>We would love to hear from you!</p>
-                </div>
-                <div class="contactForm">
-                    <form onSubmit={sendEmail}>
-                        <div class="row100">
-                            <div class="info">
-                                <input type="text" class="form-control" name="name" placeholder="Full Name" id="name">
-                            </div>
-                            <div class="info">
-                                <input type="text" class="form-control" name="email" id="email"
-                                    placeholder="Email Address">
-                            </div>
+            <div class="mxw800p">
+                <h3>Send Us A Message</h3>
+                <p>We would love to hear from you!</p>
+            </div>
+            <div class="contactForm">
+                <form onSubmit={sendEmail}>
+                    <div class="row100">
+                        <div class="info">
+                            <input type="text" class="form-control" name="name" placeholder="Full Name" id="name">
                         </div>
-                        <div class="row100">
-                            <div class="inputBx100">
-                                <textarea placeholder="Message"></textarea>
-                                <input type="text" class="form-control" name="message">
-                            </div>
+                        <div class="info">
+                            <input type="text" class="form-control" name="email" id="email" placeholder="Email Address">
                         </div>
-                        <div class="row100">
-                            <div class="inputBx100">
-                                <input type="submit" value="Send" name="submit">
-                            </div>
+                    </div>
+                    <div class="row100">
+                        <div class="inputBx100">
+                            <textarea placeholder="Message"></textarea>
+                            <input type="text" class="form-control" name="message">
                         </div>
-                    </form>
-                </div>
-                <div class="sci">
-                    <ul>
-                        <li><a href="https://www.facebook.com"><img src="/static/img/facebook.png" alt="facebook"></a>
-                        </li>
-                        <li><a href="https://www.twitter.com"><img src="/static/img/twitter.png" alt="twitter"></a></li>
-                        <li><a href="https://www.instagram.com"><img src="/static/img/linkedin.png" alt="linkedin"></a>
-                        </li>
-                    </ul>
-                </div>
-                <p class="copyright">Gabe's Garden | Copyright © 2021</p>
+                    </div>
+                    <div class="row100">
+                        <div class="inputBx100">
+                            <input type="submit" value="Send" name="submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="sci">
+                <ul>
+                    <li><a href="https://www.facebook.com"><img src="/static/img/facebook.png" alt="facebook"></a>
+                    </li>
+                    <li><a href="https://www.twitter.com"><img src="/static/img/twitter.png" alt="twitter"></a></li>
+                    <li><a href="https://www.instagram.com"><img src="/static/img/linkedin.png" alt="linkedin"></a>
+                    </li>
+                </ul>
+            </div>
+            <p class="copyright">Gabe's Garden | Copyright © 2021</p>
         </div>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
