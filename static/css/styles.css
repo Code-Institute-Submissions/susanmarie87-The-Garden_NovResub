@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins|Ephesis:200,300,400,500,600,700,800,900&display=swap&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    /*font-family: 'Poppins', sans-serif;*/
 }
 
 html {
@@ -109,6 +109,12 @@ header.sticky ul li a {
     position: relative;
     text-align: center;
     width: 100%;
+}
+
+span.quote {
+    font-family: Ephesis;
+    font-size: small;
+
 }
 
 /***********Our Mission Content****************/
@@ -333,7 +339,7 @@ p {
     width: 100%;
 }
 
-.contactForm .row100 .inputBx50 {
+.contactForm .row100 .info {
     width: 50%;
     margin: 0 20px;
 }
@@ -554,11 +560,11 @@ p {
     }
 
     /***********Contact Form Media Queries****************/
-    .conactForm .row100 {
+    .contactForm .row100 {
         flex-direction: column;
     }
 
-    .contactForm .row100 .inputBx50,
+    .contactForm .row100 .info,
     .contactForm .row100 .inputBx100 {
         width: 100%;
         margin: 0;
@@ -578,8 +584,11 @@ p {
     }
 }
 
-
 /*Register and Login Form*/
+
+section.active {
+    background: #5a5a5a;
+}
 
 section .container {
     position: relative;
@@ -720,7 +729,7 @@ section .container.active .signinBx .imgBx {
 
 @media (max-width: 991px) {
     section .container {
-        max-width: 400px;
+        max-width: 260px;
     }
 
     section .container .imgBx {
@@ -820,12 +829,23 @@ section .container.active .signinBx .imgBx {
     align-items: center;
 }
 
-/* -- Event Card images */
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+}
+
+
+/* Event Card images */
 img {
     display: block;
     width: 100%;
     height: 100%;
 }
+
+/* Event Card Styles */
 
 .wrapper {
     width: 100%;
@@ -903,6 +923,7 @@ img {
     }
 }
 
+
 /* FLASH MESSAGES */
 .flashes h4 {
     line-height: 2;
@@ -976,12 +997,6 @@ img {
 }
 
 
-.header {
-    padding: 30px;
-    font-size: 40px;
-    text-align: center;
-    background: white;
-}
 
 /* Create two unequal columns that floats next to each other */
 /* Left column */
