@@ -1,5 +1,4 @@
 import os
-import json
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -16,7 +15,6 @@ app = Flask(__name__)
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
-DEVELOPMENT = True
 
 mongo = PyMongo(app)
 
@@ -234,7 +232,7 @@ def logout():
 @app.route("/register_events", methods=["GET", "POST"])
 def register_events():
     """
-    Returns register page. ALlows user to create new account.
+    Returns register page. Allows user to create new account.
     """
     if not session.get("user", None):
         return redirect(url_for("login"))
@@ -260,7 +258,7 @@ def contact():
 
 
 @app.errorhandler(404)
-def not_found(e):
+def not_found():
     """
     On 400 error user will be oassed to custom error page.
     """
@@ -268,7 +266,7 @@ def not_found(e):
 
 
 @app.errorhandler(500)
-def internal_error(err):
+def internal_error():
     """
     On 500 error user will be oassed to custom error page.
     """
