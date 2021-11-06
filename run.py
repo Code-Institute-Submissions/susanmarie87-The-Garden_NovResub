@@ -2,9 +2,8 @@ import os
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask import (
-    Flask, flash, render_template,
-    redirect, request, session, url_for)
+from flask import Flask, flash, redirect, \
+    render_template, request, session, url_for
 if os.path.exists("env.py"):
     import env
 
@@ -115,9 +114,9 @@ def create_event():
             "category_name": request.form.get("category_name"),
             "event_name": request.form.get("event_name"),
             "event_date": request.form.get("event_date"),
-            "image": request.form.get("image")
-
+            "image": "/static/img/water-boy.jpg" if request.form.get("image") == "" else request.form.get("image")
         }
+
         mongo.db.events.insert_one(event)
         flash("You have Created a New Event!")
     return redirect(url_for("events"))
@@ -211,7 +210,6 @@ def profile(username):
             {"_id": {"$in": registrations}}))
         my_events = list(mongo.db.events.find(
             {"username": session["user"]}))
-
         return render_template(
             "profile.html", username=username, events=events,
             my_events=my_events)
@@ -276,4 +274,4 @@ def internal_error():
 if __name__ == "__main__":
     app.run(
         host=os.environ.get("IP", "0.0.0.0"),
-        port=int(os.environ.get("PORT", "5000")),)
+        port=int(os.environ.get("PORT", "5000")),
