@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins|Ephesis:200,300,400,500,600,700,800,900&display=swap&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ephesis:wght@600&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*font-family: 'Poppins', sans-serif;*/
+    font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -112,7 +112,7 @@ header.sticky ul li a {
 }
 
 span.quote {
-    font-family: Ephesis;
+    font-family: "Ephesis", sans-serif;
     font-size: small;
 
 }
