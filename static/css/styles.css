@@ -523,14 +523,16 @@ p {
         color: #000;
     }
 
+
     /***********Hero Image Media Queries***************/
     .banner {
         background-position: center;
     }
 
     .banner h2 {
-        font-size: 60px;
+        font-size: 40px;
     }
+
 
     #home.banner {
         padding: 0;
@@ -545,6 +547,8 @@ p {
         font-size: 36px;
         line-height: 1em;
     }
+
+
 
     /***********Logo box media queries****************/
     .services {
@@ -920,6 +924,16 @@ img {
 
     .cards_wrap .card_item {
         width: 100%;
+    }
+}
+
+@media (max-width: 280px) {
+    #portfolio.sec.work {
+        padding-left: 20px;
+    }
+
+    .sec {
+        padding-left: 20px;
     }
 }
 
