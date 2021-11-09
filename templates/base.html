@@ -15,18 +15,7 @@
 </head>
 
 <body>
-    <section>
-        {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        {% for messages in messages %}
-        <div class="row flashes">
-            <h4 class="center-align">{{ message }}</h4>
 
-        </div>
-        {% endfor %}
-        {% endif %}
-        {% endwith%}
-    </section>
     <header id="header">
         <a href="#" class="logo">Gabe's Garden</a>
         <ul>
