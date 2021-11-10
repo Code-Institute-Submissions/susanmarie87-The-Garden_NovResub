@@ -378,31 +378,59 @@ event_time       | String
 ---
 ---
 * Problem: Profile returned 404 error event. "Undefined error: 'event' is undefined.
-
 * Cause: In  the middle of correcting cards fto be styled, I improperly deleted an important value tag needed to render the page.
-
 * Resolution: In order to solve this minor issue, I was returned the value tag to it's home and the profile page rendered properly again.
 ---
 ---
-* Problem: Improperly detecting and existing user re-registering.
-
+* Problem: Improperly detecting an existing user re-registering.
 * Cause: Duplicate username being used. 
-
 * Resolution: Detect duplicate username and redirect to the login page.
 ---
-* Problem: The cards are not rendering properly on the screen for the profile page.
-* Cause: Unresolved issue that must be addressed.
-* Resolution: Uknown at this point.
+* Problem: Upon re-opening my project after failed submission, my workspace would not open. When trying to expose the port, an error was returned to the terminal:
+ ‘ModuleNotFoundError: No module named 'flask_pymongo'
+* It appears that somehow my env.py file had completely vanished into thin air taking all of my dependencies with it (MONGO_DB, MONGO_URI, SECRET_KEY etc.)
+* In order to solve this problem I had to add a new env.py file along with the dependencies. 
+
+---
+* Problem: Website still wouldn't work after adding env.py and dependencies. MONGO database was paused due to inactivity.
+ I tried reconnecting the database to project. At first, the string I was prompted to copy from MONGO was not working.
+The string being given by MONGO was:
+mongosh "mongodb+srv://cluster0.ls3xk.mongodb.net/myFirstDatabase" --username susanMarie
+* Cause: I was inputting an incorrect string.
+* Solution: At first, the string I was prompted to copy from MONGO was not working.
+The string being given by MONGO was:
+mongosh "mongodb+srv://cluster0.ls3xk.mongodb.net/myFirstDatabase" --username susanMarie
+Which returned the error “Command Unknown” When this didn’t work I rewatched the videos from the Mongo portion in the Backend Development section and noticed the connection string was incorrect so I changed it to:
+mongo "mongodb+srv://cluster0.r6vtl.mongodb.net/the-garden" --username susanMarie
+
+This code brought me to the password portion of the process and I was able to connect.
+
+---
+* Problem: When I run python3 run.py a new error of:
+
+  Traceback (most recent call last):
+  File "run.py", line 20, in <module>
+    mongo = PyMongo(app)
+
+* Cause: The problem was that I had not added the MONGODB application connection string to my env.py file. 
+* Solution: Once the connection string was added, the site was finally up and running again. 
+
+---
+* Problem: Adding docstrings to python functions caused Heroku app to crash.
+* Cause: Improper syntax
+* Solution: By correcting the imporper syntax, I was able to get the deployed app to start up again. 
+
+---
+
+
 ### Unresolved Issues
 ---
-* Poor breakdown response on Galaxy Fold.
+* There is a poor scree breakdown response on Galaxy Fold in most browsers except for Chrome. 
 
-* I was unable to get the flash messages functioning as I ran out of time. Lacking user interaction
-  reflects poorly on the app and is quite an issue. This problem will need to be resolved in the future.
+* I was unable to get the flash messages functioning and i believe it was due to the fact that I didn't
+  make individual components. Everything was lumped together and I used tutor support so much that I now receive
+  warnings so I really hate to add more onto my time. 
   
-* Create event card, I cannot implement jinja templating as it is a custom event. I cannot remove the value either. The value of the image then stays on the card. I ran out of time and brainspace to fix this error as well.
-
-* Cards will not render properly onto the profile page screen.
 ---
 
 ## **Deployment**
@@ -537,6 +565,8 @@ To clone the project:
 - [Photo by:Aleksandra Sapozhnikova]("https://unsplash.com/@rruprrup?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText") 
 
 - [Photo by:Runze Shi]("https://unsplash.com/@wizard_s?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText")
+
+- [Favicon by:](https://freesvg.org/1544335729)
 
 - Photo by Artem Beliaikin from Pexels (apple trees)
 
