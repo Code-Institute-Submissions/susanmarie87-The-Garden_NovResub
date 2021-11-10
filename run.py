@@ -114,7 +114,8 @@ def create_event():
             "category_name": request.form.get("category_name"),
             "event_name": request.form.get("event_name"),
             "event_date": request.form.get("event_date"),
-            "image": "/static/img/water-boy.jpg" if request.form.get("image") == "" else request.form.get("image")
+            "image": "/static/img/water-boy.jpg" if request.form.get(
+                "image") == "" else request.form.get("image")
         }
 
         mongo.db.events.insert_one(event)
