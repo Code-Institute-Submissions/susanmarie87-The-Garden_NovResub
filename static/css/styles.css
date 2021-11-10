@@ -937,27 +937,6 @@ img {
     }
 }
 
-
-/* FLASH MESSAGES */
-.flashes h4 {
-    line-height: 2;
-}
-
-
-.container-fluid {
-
-    background: url('../img/backgroud.jpg');
-}
-
-.profile {
-    padding: 1rem;
-    padding-top: 15rem;
-    margin-bottom: 15rem;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 15rem;
-}
-
 /*Login PAGE*/
 .container-login {
     background: url('../img/backgroud.jpg');
@@ -996,7 +975,15 @@ img {
     text-transform: uppercase;
     text-align: center;
     line-height: 1em;
+}
 
+h1.events {
+    color: #009999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
 }
 
 .banner-4 {
