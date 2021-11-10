@@ -422,15 +422,20 @@ This code brought me to the password portion of the process and I was able to co
 
 ---
 
-
 ### Unresolved Issues
 ---
 * There is a poor scree breakdown response on Galaxy Fold in most browsers except for Chrome. 
 
 * I was unable to get the flash messages functioning and i believe it was due to the fact that I didn't
-  make individual components. Everything was lumped together and I used tutor support so much that I now receive
-  warnings so I really hate to add more onto my time. 
+  make individual components. All of my code was unfortunately lumped together creating a very real issue when trying to apply the flash function.
+  I used tutor support so much that I now receive warnings so I really hate to add more onto my time. 
   
+* There are several warnings left in run.py which all have to do with my poorly chosen naming conventions in regards to registration
+  and events. For the sake of my sanity, I have left those warnings. 
+
+* env.py imported but unused error was left as well. 
+
+* Several attempts to try and add a doctstring on line 1 but it failed miserably every time.
 ---
 
 ## **Deployment**
